@@ -1,0 +1,96 @@
+// variables
+$background-color: #fff;
+
+/* Fonts */
+@font-face {
+  font-family: "bahnschrift";
+  src: url("/fonts/bahnschrift.ttf");
+}
+
+/* Bases */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 1rem = 10px */
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: inherit;
+  outline: none;
+
+  &:before, &:after {
+    box-sizing: inherit;
+    outline: none;
+  }
+}
+
+body {
+  font-family: "bahnschrift", helvetica;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  background-color: $background-color;
+}
+
+/* Selection */
+::selection {
+  color: #000;
+  background: #a079d0;
+}
+
+/** Global **/
+header, nav {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/** Utilities **/
+/* Usuals */
+.fullscreen {
+  position: relative;
+  width: 100vw;
+  width: calc(var(--vw, 1vw) * 100);
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+/* Displays */
+.display-mobile {
+  display: block !important;
+}
+
+.display-pc {
+  display: none !important;
+}
+
+@media only screen and (min-width: 768px) {
+  .display-mobile {
+    display: none !important;
+  }
+
+  .display-pc {
+    display: block !important;
+  }
+}
+
+.hidden {
+  opacity: 0;
+}
+
+/** Navbar **/
+@import 'navbar';
+
+/** Borrar **/
+@import 'borrar';

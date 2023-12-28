@@ -12,8 +12,6 @@ app.set('port', process.env.PORT || 3000);
 app.use(express.static(__dirname + '/public'));
 
 // Routing
-// Add all the routs
-// Add descrip and robots for all the routs
 app.get('/', function(req, res){
     res.render('home', {
         title: "Juan Bolatti - Desarrollador Web"

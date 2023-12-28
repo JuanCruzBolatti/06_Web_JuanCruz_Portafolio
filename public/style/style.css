@@ -1,0 +1,273 @@
+/* Fonts */
+@font-face {
+  font-family: "bahnschrift";
+  src: url("/fonts/bahnschrift.ttf");
+}
+/* Bases */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 1rem = 10px */
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: inherit;
+  outline: none;
+}
+*:before, *:after {
+  box-sizing: inherit;
+  outline: none;
+}
+
+body {
+  font-family: "bahnschrift", helvetica;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  background-color: #fff;
+}
+
+/* Selection */
+::-moz-selection {
+  color: #000;
+  background: #a079d0;
+}
+::selection {
+  color: #000;
+  background: #a079d0;
+}
+
+/** Global **/
+header, nav {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/** Utilities **/
+/* Usuals */
+.fullscreen {
+  position: relative;
+  width: 100vw;
+  width: calc(var(--vw, 1vw) * 100);
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+/* Displays */
+.display-mobile {
+  display: block !important;
+}
+
+.display-pc {
+  display: none !important;
+}
+
+@media only screen and (min-width: 768px) {
+  .display-mobile {
+    display: none !important;
+  }
+  .display-pc {
+    display: block !important;
+  }
+}
+.hidden {
+  opacity: 0;
+}
+
+/** Navbar **/
+/* Logo */
+.logo-container {
+  position: fixed;
+  top: 2.344vw;
+  left: 1.867vw;
+  width: 4.647vw;
+}
+.logo-container img {
+  width: 100%;
+  position: absolute;
+  transition: 0.5s linear;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 2.759vw;
+  right: 4.882vw;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 0;
+  gap: 10rem;
+}
+.navbar::before {
+  content: "";
+  background-color: red;
+  width: 15vw;
+  height: 35vh;
+  position: absolute;
+  top: -1.415vw;
+  right: -3.282vw;
+  border-radius: 10px;
+  z-index: 0;
+}
+.navbar .nav-toggle {
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+}
+.navbar .nav-toggle .box {
+  background-color: #fff;
+  width: 2.282vw;
+  height: 2.282vw;
+  border: solid black 0.415vw;
+  position: absolute;
+  transform: rotate(45deg);
+}
+.navbar .nav-toggle .top-box {
+  z-index: 2;
+  top: 0;
+  left: 30%;
+  transition: 0.2s ease;
+}
+.navbar .nav-toggle .bottom-box {
+  z-index: 1;
+  top: 1vw;
+  left: 30%;
+  transition: 0.5s ease;
+}
+.navbar .nav-toggle:hover .box {
+  transform: translateY(-10px) rotate(45deg);
+}
+.navbar .nav-display {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  gap: 10rem;
+}
+.navbar .nav-display a {
+  position: relative;
+  color: #000;
+}
+.navbar .nav-display a::before {
+  position: absolute;
+  top: 0;
+  left: 50%; /* la mitad del ancho (100 / 2 = 50) */
+  content: "";
+  width: 3.8vw;
+  height: 75px;
+  background-image: url(../img/Icon_01.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.navbar .nav-display a::after {
+  position: absolute;
+  top: calc(50px - 1rem); /* La mitad del height menos la mitad del font */
+  right: 50px;
+  content: "";
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  opacity: 0;
+  transition: 0.4s ease;
+}
+.navbar .nav-display a:hover::after {
+  opacity: 1;
+  right: 70px;
+}
+.navbar .nav-display .menu-one::before {
+  background-color: blue;
+}
+.navbar .nav-display .menu-one:hover::after {
+  content: "Conoceme";
+}
+.navbar .nav-display .menu-two::before {
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+          clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background-color: red;
+}
+.navbar .nav-display .menu-two:hover::after {
+  content: "Portafolio";
+}
+.navbar .nav-display .menu-three::before {
+  -webkit-clip-path: circle(50% at 50% 50%);
+          clip-path: circle(50% at 50% 50%);
+  background-color: yellow;
+}
+.navbar .nav-display .menu-three:hover::after {
+  content: "Arte";
+}
+.navbar .nav-display .menu-four::before {
+  -webkit-clip-path: circle(50% at 50% 50%);
+          clip-path: circle(50% at 50% 50%);
+  background-color: yellow;
+}
+.navbar .nav-display .menu-four:hover::after {
+  content: "Contactame";
+}
+
+.displayed {
+  animation: aa 0.85s;
+}
+.displayed .nav-toggle .top-box {
+  transform: translateY(-0.3vw) rotate(135deg);
+}
+.displayed .nav-toggle:hover .top-box {
+  transform: rotate(135deg);
+}
+.displayed .nav-toggle:hover .bottom-box {
+  transform: rotate(45deg);
+}
+.displayed .nav-display {
+  display: flex;
+  animation: 0.85s aaa;
+}
+
+@keyframes aa {
+  0% {
+    gap: 0;
+  }
+  50% {
+    gap: 16rem;
+  }
+  100% {
+    gap: 15rem;
+  }
+}
+@keyframes aaa {
+  0% {
+    gap: 0;
+  }
+  50% {
+    gap: 12rem;
+  }
+  100% {
+    gap: 10rem;
+  }
+}
+/** Borrar **/
+.pepe {
+  font-size: 3rem;
+  margin: 30rem auto;
+  text-align: justify;
+  width: 85%;
+}
+
+.roberto {
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */

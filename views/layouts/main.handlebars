@@ -4,13 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{title}}</title>
+
+    <!-- Normalize -->
+    <link rel="stylesheet" href="/style/normalize.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="/style/style.css"> 
 </head>
 <body>
-    <header>
-        {{> navbar}}
-    </header>
+    
+    {{> navbar}}
+    
 
     {{{body}}}
-    
+
+    <!-- Main script -->
+    <script src="/js/script.js"></script>
 </body>
 </html>
