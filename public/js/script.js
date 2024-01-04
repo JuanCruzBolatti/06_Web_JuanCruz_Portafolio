@@ -14,6 +14,27 @@ function scrollTo(element) {
     });
 }
 
+function scrollToTop() {
+    document.body.scroll({
+        top: 0
+    });
+    document.documentElement.scroll({
+        top: 0
+    });
+}
+
+window.onscroll = () => {
+    // Logo
+    if (window.scrollY > 0) {
+        logoDisplay(0)
+    }
+    if (window.scrollY > 800) {
+        logoDisplay(4)
+    }
+    // To top
+    toTopDisplay();
+}
+
 // Logo
 var logos = document.querySelector(".logo-container").getElementsByTagName('img');
 
@@ -22,15 +43,6 @@ function logoDisplay(number) {
         logos[i].classList.add("hidden");
     }
     logos[number].classList.remove("hidden");
-}
-
-window.onscroll = () => {
-    if (window.scrollY > 0) {
-        logoDisplay(0)
-    }
-    if (window.scrollY > 800) {
-        logoDisplay(4)
-    }
 }
 
 // Toggle Navbar
@@ -43,3 +55,19 @@ function toggleNav(navbar) {
 function anchorTo(element) {
     scrollTo(document.querySelector(element.getAttribute("href")));
 }
+
+// Display: To Top Button & Media Anchors
+var toTopButton = document.getElementById("toTopButton");
+var media = document.getElementById("media");
+
+function toTopDisplay() {
+    if(window.scrollY > 200) {
+        toTopButton.style.display = "block";
+        media.style.display = "flex";
+    } else {
+        toTopButton.style.display = "none";
+        media.style.display = "none";
+    }
+}
+
+
