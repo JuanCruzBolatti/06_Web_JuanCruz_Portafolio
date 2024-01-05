@@ -28,15 +28,21 @@ window.onscroll = () => {
     if (window.scrollY > 0) {
         logoDisplay(0)
     }
+    if (window.scrollY > 200) {
+        logoContainer.classList.add("logo-scrolled");
+    } else {
+        logoContainer.classList.remove("logo-scrolled");
+    }
     if (window.scrollY > 800) {
         logoDisplay(4)
     }
-    // To top
-    toTopDisplay();
+    // Bottom Navbar Display
+    bottomNavbarDisplay();
 }
 
 // Logo
-var logos = document.querySelector(".logo-container").getElementsByTagName('img');
+var logoContainer = document.querySelector("#logo-pc");
+var logos = logoContainer.getElementsByTagName('img');
 
 function logoDisplay(number) {
     for (let i = 0; i < logos.length; i++) {
@@ -60,7 +66,7 @@ function anchorTo(element) {
 var toTopButton = document.getElementById("toTopButton");
 var media = document.getElementById("media");
 
-function toTopDisplay() {
+function bottomNavbarDisplay() {
     if(window.scrollY > 200) {
         toTopButton.style.display = "block";
         media.style.display = "flex";

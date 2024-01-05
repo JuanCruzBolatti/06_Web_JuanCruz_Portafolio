@@ -10,7 +10,8 @@ $background-color: #fff;
 /* Bases */
 html {
   box-sizing: border-box;
-  font-size: 62.5%; /* 1rem = 10px */
+  font-size: 62.5%;
+  /* 1rem = 10px */
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
@@ -20,7 +21,8 @@ html {
   box-sizing: inherit;
   outline: none;
 
-  &:before, &:after {
+  &:before,
+  &:after {
     box-sizing: inherit;
     outline: none;
   }
@@ -40,7 +42,8 @@ body {
 }
 
 /** Global **/
-header, nav {
+header,
+nav {
   display: block;
 }
 
@@ -88,6 +91,25 @@ ul {
 
 .hidden {
   opacity: 0;
+}
+
+/* Containers */
+.container {
+  width: 85%;
+  max-width: 150rem;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 1280px) {
+  .container {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 70%;
+  }
 }
 
 /** Navbar **/
