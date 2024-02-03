@@ -1,0 +1,143 @@
+.about-opener {
+    border: none;
+    padding: 0;
+    position: relative;
+    width: 13rem;
+    cursor: pointer;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 15px;
+
+    img {
+        position: relative;
+        width: 100%;
+        border-radius: 15px;
+        transition: .3s ease;
+    }
+
+    .bars {
+        position: absolute;
+        top: calc(55% - 7px);
+        left: calc(50% - 20px);
+        z-index: 1;
+        transition: .3s ease;
+
+        div {
+            width: 40px;
+            height: 7px;
+            background-color: #fff;
+            opacity: 0;
+            transition: 0.4s;
+        }
+
+        .bar1 {
+            width: 20px;
+            transform: translate(0, -50%) rotate(45deg);
+        }
+        .bar2 {
+            transform: translate(0, 50%);
+        }
+    }
+
+    &::after {
+        content: "";
+        width: 100%;
+        aspect-ratio: 1;
+        border-radius: 15px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgb(189, 128, 227);
+        background: linear-gradient(49deg, rgba(189, 128, 227, 1) 0%, rgba(118, 177, 228, 1) 100%);
+        opacity: 0;
+        transition: .3s ease;
+    }
+
+    &:hover {
+        img {
+            filter: grayscale(40%) contrast(120%);
+        }
+
+        .bars {
+            div {
+                opacity: 1;
+            }
+        }
+    }
+
+    
+}
+
+.about-opener-open {
+    img {
+        filter: grayscale(90%) contrast(160%);
+    }
+
+    .bars {
+        div {
+            opacity: 1;
+        }
+
+        .bar1 {
+            width: 40px;
+            transform: translate(0, 0) rotate(45deg);
+        }
+
+        .bar2 {
+            transform: translate(0, -100%) rotate(-45deg);
+        }
+    }
+
+    &::after {
+        opacity: 0.5;
+    }
+}
+
+.about {
+    position: fixed;
+    top: 5vh;
+    right: 7.5vw;
+    width: 42.5vw;
+    height: 90vh;
+    padding: 3rem;
+    z-index: 5;
+    animation: aboutDisplayAnimation .3s;
+    opacity: 1;
+    transition: .3s ease-in-out;
+
+    border-radius: 15px;
+    background: rgb(159,193,234);
+    background: linear-gradient(186deg, rgba(159,193,234,0.8) 0%, rgba(163,166,211,0.8) 100%);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+
+    display: flex;
+    flex-direction: column;
+
+    .about-image {
+        height: 30%;
+
+        img {
+            height: 100%;
+            width: auto;
+        }
+    }
+
+    .about-content {
+        height: 70%;
+
+        h2 {
+            font-size: 5rem;
+            margin: 0;
+        }
+    }
+}
+
+@keyframes aboutDisplayAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

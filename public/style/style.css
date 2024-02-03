@@ -89,6 +89,10 @@ ul {
   opacity: 0;
 }
 
+.display-none {
+  display: none !important;
+}
+
 /* Containers */
 .container {
   width: 85%;
@@ -106,6 +110,55 @@ ul {
     width: 70%;
   }
 }
+/** Borrar **/
+.progress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10rem;
+}
+.progress .progress-intro h2 {
+  font-size: 6rem;
+  text-align: center;
+}
+.progress .progress-intro p {
+  font-size: 2.5rem;
+}
+.progress .progress-intro .progress-contact {
+  display: flex;
+  flex-direction: column;
+}
+.progress .progress-intro .progress-contact a {
+  font-size: 2rem;
+  margin: 0;
+  margin-left: 2rem;
+}
+.progress .progress-intro .progress-contact p {
+  font-size: 2rem;
+  margin: 0;
+  margin-left: 2rem;
+}
+.progress .progress-outro {
+  width: 100%;
+}
+.progress .progress-outro p {
+  font-size: 2.5rem;
+}
+.progress .progress-outro .progress-bar {
+  width: 100%;
+  background-color: rgb(247, 210, 217);
+}
+.progress .progress-outro .progress-bar div {
+  color: #fff;
+  text-align: center;
+  align-items: center;
+  padding: 1rem 0;
+  width: 15%;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: crimson;
+}
+
 /** Navbar **/
 /* Logo */
 .logo-container {
@@ -255,6 +308,7 @@ ul {
 }
 
 .displayed {
+  z-index: 99;
   animation: aa 0.85s;
 }
 .displayed::before {
@@ -392,13 +446,248 @@ ul {
     bottom: 2.344vw;
   }
 }
-/** Borrar **/
-.pepe {
-  font-size: 3rem;
-  margin: 30rem auto;
+/** Home **/
+.home {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5vw;
+}
+.home .home-content {
+  display: flex;
+  flex-direction: column;
+}
+.home .home-content .home-text {
+  margin-top: 6rem;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 2vw;
+}
+.home .home-content .home-text p {
+  margin: 0;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
   text-align: justify;
 }
 
-.roberto {
+@media only screen and (max-width: 768px) {
+  .home {
+    grid-template-columns: 1fr;
+  }
+  .home .home-content {
+    order: 2;
+  }
+}
+/** About **/
+.about-opener {
+  border: none;
+  padding: 0;
+  position: relative;
+  width: 13rem;
+  cursor: pointer;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.about-opener img {
+  position: relative;
   width: 100%;
-}/*# sourceMappingURL=style.css.map */
+  border-radius: 15px;
+  transition: 0.3s ease;
+}
+.about-opener .bars {
+  position: absolute;
+  top: calc(55% - 7px);
+  left: calc(50% - 20px);
+  z-index: 1;
+  transition: 0.3s ease;
+}
+.about-opener .bars div {
+  width: 40px;
+  height: 7px;
+  background-color: #fff;
+  opacity: 0;
+  transition: 0.4s;
+}
+.about-opener .bars .bar1 {
+  width: 20px;
+  transform: translate(0, -50%) rotate(45deg);
+}
+.about-opener .bars .bar2 {
+  transform: translate(0, 50%);
+}
+.about-opener::after {
+  content: "";
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgb(189, 128, 227);
+  background: linear-gradient(49deg, rgb(189, 128, 227) 0%, rgb(118, 177, 228) 100%);
+  opacity: 0;
+  transition: 0.3s ease;
+}
+.about-opener:hover img {
+  filter: grayscale(40%) contrast(120%);
+}
+.about-opener:hover .bars div {
+  opacity: 1;
+}
+
+.about-opener-open img {
+  filter: grayscale(90%) contrast(160%);
+}
+.about-opener-open .bars div {
+  opacity: 1;
+}
+.about-opener-open .bars .bar1 {
+  width: 40px;
+  transform: translate(0, 0) rotate(45deg);
+}
+.about-opener-open .bars .bar2 {
+  transform: translate(0, -100%) rotate(-45deg);
+}
+.about-opener-open::after {
+  opacity: 0.5;
+}
+
+.about {
+  position: fixed;
+  top: 5vh;
+  right: 7.5vw;
+  width: 42.5vw;
+  height: 90vh;
+  padding: 3rem;
+  z-index: 5;
+  animation: aboutDisplayAnimation 0.3s;
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+  border-radius: 15px;
+  background: rgb(159, 193, 234);
+  background: linear-gradient(186deg, rgba(159, 193, 234, 0.8) 0%, rgba(163, 166, 211, 0.8) 100%);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  display: flex;
+  flex-direction: column;
+}
+.about .about-image {
+  height: 30%;
+}
+.about .about-image img {
+  height: 100%;
+  width: auto;
+}
+.about .about-content {
+  height: 70%;
+}
+.about .about-content h2 {
+  font-size: 5rem;
+  margin: 0;
+}
+
+@keyframes aboutDisplayAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/** Portfolio **/
+.portfolio h2 {
+  margin: none;
+  font-size: 3rem;
+}
+.portfolio .portfolio-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem;
+}
+.portfolio .portfolio-cards .portfolio-card {
+  position: relative;
+  height: 60vh;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.portfolio .portfolio-cards .portfolio-card img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.portfolio .portfolio-cards .portfolio-card .portfolio-card-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4;
+}
+
+/** Knowledge **/
+.tab {
+  background-color: #ddecfd;
+  border-radius: 13px;
+}
+.tab .tab-box {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 2rem;
+  align-items: center;
+  border-bottom: 2px solid #949494;
+}
+.tab .tab-box .tab-btn {
+  font-size: 2rem;
+  background-color: none;
+  border: none;
+  padding: 2rem;
+  cursor: pointer;
+}
+.tab .tab-box .tab-active {
+  color: crimson;
+}
+.tab .tab-box .tab-line {
+  position: absolute;
+  top: 62px;
+  left: 17px;
+  width: 90px;
+  height: 5px;
+  background-color: crimson;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+}
+.tab .tab-contents {
+  padding: 2rem;
+}
+.tab .tab-contents .tab-content {
+  display: none;
+  animation: tabMove 0.5s ease;
+}
+.tab .tab-contents .tab-content h4 {
+  margin-bottom: 1rem;
+}
+.tab .tab-contents .tab-active {
+  display: block;
+}
+
+@keyframes tabMove {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+/** Art **/
+.art-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+  grid-auto-rows: 250px;
+  grid-auto-flow: dense;
+  width: 90%;
+}
+
+/** Contact **/
+/** Footer **//*# sourceMappingURL=style.css.map */

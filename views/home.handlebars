@@ -1,5 +1,129 @@
-<h1 class="pepe container">Juan Cruz Bolatti Torcasio</h1>
-<p class="pepe container">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, ipsa excepturi! Beatae quaerat cumque culpa facere. Voluptatibus quod possimus ipsa sequi, asperiores eaque quo atque veritatis earum quisquam provident iusto porro itaque dolore voluptatum fugit blanditiis vero quaerat fuga facilis, voluptatem, neque iure commodi. Aliquam asperiores in doloribus, veritatis at eaque similique. Provident culpa est saepe ex, impedit nostrum ipsum. Velit aliquid perferendis reiciendis atque autem amet eligendi inventore placeat esse itaque at ex recusandae, modi aperiam earum dolorum tempora? Similique voluptatem voluptate dolorem laudantium? Labore suscipit deleniti assumenda necessitatibus, velit sunt iste sapiente exercitationem adipisci explicabo, nesciunt aut accusantium. Alias repellat libero minima officia mollitia voluptatem cumque explicabo, architecto laboriosam quidem? Quo corrupti commodi libero temporibus cumque harum molestias debitis ab odit quidem voluptas dolores, delectus laborum excepturi unde voluptatem voluptates odio quasi nesciunt a nulla suscipit maiores? Sed neque quisquam doloribus ex dolorem dolore consectetur tempore, blanditiis aliquid.</p>
-<img class="roberto" src="./img/Borrara.png" alt="">
+<section class="container home">
 
-<p id="pepe"></p>
+    <div class="home-content">
+        <div id="animation-home" style="width: 547px;"></div>
+
+        <div class="home-text">
+            <button class="about-opener" onclick="toggleAbout()">
+                <img src="/img/perfil.png" alt="">
+                <div class="bars">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                </div>
+            </button>
+
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet ipsa, fugiat, nihil earum eos velit vel
+                laudantium quis eaque nostrum ratione. Laboriosam nulla nobis nesciunt? Itaque sequi ipsam nisi vero
+                dolores, hic architecto assumenda velit dolore recusandae labore provident. Non!</p>
+        </div>
+    </div>
+
+    <div class="home-main-animation" id="animation-home-main" style="height: 60vh;">
+    </div>
+
+</section>
+
+{{> about }}
+
+<section class="container portfolio">
+    <h2>Mi Trabajo</h2>
+    <div class="portfolio-cards">
+        <div class="portfolio-card">
+            <div class="portfolio-card-content">
+                <h3>Portafolios</h3>
+                <p>La mejor forma de mostrar tu trabajo!</p>
+                <a href="#"> Ver Más </a>
+            </div>
+            <img src="/img/perfil.png" alt="">
+        </div>
+
+        <div class="portfolio-card">
+            <div class="portfolio-card-content">
+                <h3>Empresariales</h3>
+                <p>Para que se de a conocer tu Empresa!</p>
+                <a href="#"> Ver Más </a>
+            </div>
+            <img src="/img/perfil.png" alt="">
+        </div>
+
+        <div class="portfolio-card">
+            <div class="portfolio-card-content">
+                <h3>Artísticos</h3>
+                <p>Para desplegar tu arte en el Mundo!</p>
+                <a href="#"> Ver Más </a>
+            </div>
+            <img src="/img/perfil.png" alt="">
+        </div>
+    </div>
+</section>
+
+<section class="container knowledge">
+    <h2>Conocimientos</h2>
+
+    <div class="tab">
+        <div class="tab-box">
+            <button class="tab-btn tab-active">Programación</button>
+            <button class="tab-btn">Diseño</button>
+            <button class="tab-btn">Estudio</button>
+            <button class="tab-btn">Biblioteca</button>
+            <button class="tab-btn">Otros</button>
+            <div class="tab-line"></div>
+        </div>
+        <div class="tab-contents">
+            <div class="tab-content tab-active">
+                <h4>Programación</h4>
+                <p>Esta Pagina - Stacks - C, c++ - github y eso</p>
+            </div>
+
+            <div class="tab-content">
+                <h4>Diseño</h4>
+                <p>Adobe y todo eso</p>
+            </div>
+
+            <div class="tab-content">
+                <h4>Estudio</h4>
+                <p>Cursando 3ro con promedio - Idiomas</p>
+            </div>
+
+            <div class="tab-content">
+                <h4>Biblioteca</h4>
+                <p>Libros - Cursos</p>
+            </div>
+
+            <div class="tab-content">
+                <h4>Otros</h4>
+                <p>Haskell</p>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+<section class="container art">
+    <h2>Arte</h2>
+
+    <div class="art-cards">
+        <div class="art-card-main">
+            <h4>Arte Titulo</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non fugit eligendi corporis ratione dolor culpa corrupti laboriosam! Mollitia at explicabo illo voluptatem architecto dolorum consectetur illum maxime alias eveniet magni, cum distinctio similique a repudiandae deserunt facilis delectus aut adipisci, dicta tempora. Quibusdam deserunt illo cumque unde voluptatum doloremque aut!</p>
+        </div>
+        <div class="art-card">
+            <img src="/img/perfil.png" alt="">
+        </div>
+        <div class="art-card">
+            <img src="/img/perfil.png" alt="">
+        </div>
+        <div class="art-card">
+            <img src="/img/perfil.png" alt="">
+        </div>
+    </div>
+</section>
+
+<section class="container contact">
+    <h2>Contacto</h2>
+</section>
+
+<footer class="container footer">
+
+</footer>

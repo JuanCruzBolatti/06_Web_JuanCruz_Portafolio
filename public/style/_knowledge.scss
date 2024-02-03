@@ -1,0 +1,66 @@
+.tab {
+    background-color: #ddecfd;
+    border-radius: 13px;
+
+    .tab-box {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        gap: 2rem;
+        align-items: center;
+        border-bottom: 2px solid #949494;
+
+        .tab-btn {
+            font-size: 2rem;
+            background-color: none;
+            border: none;
+            padding: 2rem;
+            cursor: pointer;
+        }
+
+        .tab-active {
+            color: crimson;
+        }
+
+        .tab-line {
+            position: absolute;
+            top: 62px;
+            left: 17px;
+            width: 90px;
+            height: 5px;
+            background-color: crimson;
+            border-radius: 10px;
+            transition: .3s ease-in-out;
+        }
+    }
+
+    .tab-contents {
+        padding: 2rem;
+
+        .tab-content {
+            display: none;
+            animation: tabMove .5s ease;
+
+            h4 {
+                margin-bottom: 1rem;
+            }
+        }
+
+        .tab-active {
+            display: block;
+        }
+    }
+}
+
+@keyframes tabMove {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}

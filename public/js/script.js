@@ -30,6 +30,9 @@ window.onscroll = () => {
     }
     if (window.scrollY > 200) {
         logoContainer.classList.add("logo-scrolled");
+        if(aboutButton.classList.contains('about-opener-open')) {
+            toggleAbout();
+        }
     } else {
         logoContainer.classList.remove("logo-scrolled");
     }
@@ -54,7 +57,9 @@ function logoDisplay(number) {
 // Toggle Navbar
 function toggleNav(navbar) {
     navbar.classList.toggle('displayed');
-
+    if(aboutButton.classList.contains('about-opener-open')) {
+        toggleAbout();
+    }
 }
 
 // Navbar Anchors
@@ -67,7 +72,7 @@ var toTopButton = document.getElementById("toTopButton");
 var media = document.getElementById("media");
 
 function bottomNavbarDisplay() {
-    if(window.scrollY > 200) {
+    if (window.scrollY > 200) {
         toTopButton.style.display = "block";
         media.style.display = "flex";
     } else {
@@ -75,5 +80,46 @@ function bottomNavbarDisplay() {
         media.style.display = "none";
     }
 }
+// About Opener
+var aboutButton = document.querySelector('.about-opener');
+var aboutSection = document.querySelector('.about');
+function toggleAbout() {
+    aboutButton.classList.toggle('about-opener-open');
+    aboutSection.classList.toggle('display-none');
+}
 
+// Animations
+var animation = bodymovin.loadAnimation({
+    container: document.getElementById('animation-home'),
+    rederer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '/js/animation/animation-home.lottie.json'
+});
+var animation = bodymovin.loadAnimation({
+    container: document.getElementById('animation-home-main'),
+    rederer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '/js/animation/animation-home-main.lottie.json'
+});
 
+// Tab
+const tabs = document.querySelectorAll('.tab-btn');
+const tabContents = document.querySelectorAll('.tab-content');
+
+tabs.forEach((tab, index)=>{
+    tab.addEventListener('click', (e) => {
+        tabs.forEach(tab=>{tab.classList.remove('tab-active')});
+        tab.classList.add('tab-active');
+
+        var line = document.querySelector('.tab-line');
+        line.style.width = e.target.offsetWidth + "px";
+        line.style.left = e.target.offsetLeft + "px";
+
+        tabContents.forEach(content => {content.classList.remove('tab-active')});
+        tabContents[index].classList.add('tab-active');
+    });
+
+   
+});

@@ -93,6 +93,10 @@ ul {
   opacity: 0;
 }
 
+.display-none {
+  display: none!important;
+}
+
 /* Containers */
 .container {
   width: 85%;
@@ -112,8 +116,29 @@ ul {
   }
 }
 
+/** Borrar **/
+@import 'progress';
+
 /** Navbar **/
 @import 'navbar';
 
-/** Borrar **/
-@import 'borrar';
+/** Home **/
+@import 'home';
+
+/** About **/
+@import 'about';
+
+/** Portfolio **/
+@import 'portfolio';
+
+/** Knowledge **/
+@import 'knowledge';
+
+/** Art **/
+@import 'art';
+
+/** Contact **/
+@import 'contact';
+
+/** Footer **/
+@import 'footer';

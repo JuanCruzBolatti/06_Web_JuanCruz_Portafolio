@@ -1,0 +1,33 @@
+.portfolio {
+    h2 {
+        margin: none;
+        font-size: 3rem;
+    }
+
+    .portfolio-cards {
+    
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 3rem;
+        
+        .portfolio-card {
+            position: relative;
+            height: 60vh;
+            border-radius: 12px;
+            overflow: hidden;
+    
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+        
+            .portfolio-card-content {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 4;
+            }
+        }
+        
+    }
+}

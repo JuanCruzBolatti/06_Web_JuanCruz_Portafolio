@@ -1,0 +1,59 @@
+.progress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10rem;
+
+    .progress-intro {
+
+        h2 {
+            font-size: 6rem;
+            text-align: center;
+        }
+
+        p {
+            font-size: 2.5rem;
+        }
+
+        .progress-contact {
+            display: flex;
+            flex-direction: column;
+
+            a {
+                font-size: 2rem;
+                margin: 0;
+                margin-left: 2rem;
+            }
+
+            p {
+                font-size: 2rem;
+                margin: 0;
+                margin-left: 2rem;
+            }
+        }
+    }
+
+    .progress-outro {
+        width: 100%;
+        p {
+            font-size: 2.5rem;
+        }
+
+        .progress-bar {
+            width: 100%;
+            background-color: rgb(247, 210, 217);
+
+            div {
+                color: #fff;
+                text-align: center;
+                align-items: center;
+                padding: 1rem 0;
+                width: 15%;
+                font-size: 2rem;
+                font-weight: bold;
+                background-color: crimson;
+            }
+        }
+    }
+
+}

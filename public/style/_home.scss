@@ -1,0 +1,42 @@
+.home {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5vw;
+
+    .home-content {
+        display: flex;
+        flex-direction: column;
+
+        .home-text {
+            margin-top: 6rem;
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 2vw;
+
+            p {
+                margin: 0;
+                font-size: 2.4rem;
+                line-height: 2.8rem;
+                text-align: justify;
+            }
+        }
+    }
+}
+
+// @media only screen and (max-width: 1440px) {
+    
+// }
+
+// @media only screen and (max-width: 1280px) {
+    
+// }
+
+@media only screen and (max-width: 768px) {
+    .home {
+        grid-template-columns: 1fr;
+
+        .home-content {
+            order: 2;
+        }
+    }
+}
