@@ -41,6 +41,12 @@ window.onscroll = () => {
     }
     // Bottom Navbar Display
     bottomNavbarDisplay();
+
+    if(window.scrollY > (getScrollYOffset(portfolio)) - 400) {
+        animationHat01.play();
+    } else {
+        animationHat01.goToAndStop(0, true);
+    }
 }
 
 // Logo
@@ -103,6 +109,13 @@ var animation = bodymovin.loadAnimation({
     autoplay: true,
     path: '/js/animation/animation-home-main.lottie.json'
 });
+var animationHat01 = bodymovin.loadAnimation({
+    container: document.getElementById('animation-hat-01'),
+    rederer: 'svg',
+    loop: false,
+    autoplay: false,
+    path: '/js/animation/animation-hat-01.lottie.json'
+});
 
 // Tab
 const tabs = document.querySelectorAll('.tab-btn');
@@ -114,12 +127,24 @@ tabs.forEach((tab, index)=>{
         tab.classList.add('tab-active');
 
         var line = document.querySelector('.tab-line');
-        line.style.width = e.target.offsetWidth + "px";
-        line.style.left = e.target.offsetLeft + "px";
+        line.style.width = (e.target.offsetWidth - 40) + "px";
+        line.style.left = (e.target.offsetLeft + 20) + "px";
+        line.style.backgroundColor = window.getComputedStyle(tabs[index], null).getPropertyValue('background-color');
 
         tabContents.forEach(content => {content.classList.remove('tab-active')});
         tabContents[index].classList.add('tab-active');
     });
-
-   
 });
+
+// Hats
+var portfolio = document.querySelector('.portfolio');
+
+// List
+function openList(list) {
+    const contentList = document.getElementById("content" + list.id);
+    if (contentList.style.maxHeight) {
+        contentList.style.maxHeight = null;
+    } else {
+        contentList.style.maxHeight = (contentList.scrollHeight + 25) + "px";
+    }
+}

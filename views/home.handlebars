@@ -1,7 +1,7 @@
 <section class="container home">
 
     <div class="home-content">
-        <div id="animation-home" style="width: 547px;"></div>
+        <div id="animation-home"></div>
 
         <div class="home-text">
             <button class="about-opener" onclick="toggleAbout()">
@@ -26,13 +26,14 @@
 {{> about }}
 
 <section class="container portfolio">
-    <h2>Mi Trabajo</h2>
+    <h2>Mi Trabajo<div id="animation-hat-01" class="animation-hat" style="width: 10%;"></div>
+    </h2>
     <div class="portfolio-cards">
         <div class="portfolio-card">
             <div class="portfolio-card-content">
                 <h3>Portafolios</h3>
                 <p>La mejor forma de mostrar tu trabajo!</p>
-                <a href="#"> Ver Más </a>
+                <a href="#"> Visitar </a>
             </div>
             <img src="/img/perfil.png" alt="">
         </div>
@@ -41,7 +42,7 @@
             <div class="portfolio-card-content">
                 <h3>Empresariales</h3>
                 <p>Para que se de a conocer tu Empresa!</p>
-                <a href="#"> Ver Más </a>
+                <a href="#"> Visitar </a>
             </div>
             <img src="/img/perfil.png" alt="">
         </div>
@@ -50,7 +51,7 @@
             <div class="portfolio-card-content">
                 <h3>Artísticos</h3>
                 <p>Para desplegar tu arte en el Mundo!</p>
-                <a href="#"> Ver Más </a>
+                <a href="#"> Visitar </a>
             </div>
             <img src="/img/perfil.png" alt="">
         </div>
@@ -62,37 +63,214 @@
 
     <div class="tab">
         <div class="tab-box">
-            <button class="tab-btn tab-active">Programación</button>
-            <button class="tab-btn">Diseño</button>
-            <button class="tab-btn">Estudio</button>
-            <button class="tab-btn">Biblioteca</button>
-            <button class="tab-btn">Otros</button>
+            <button class="tab-btn tab-active" id="tab-01">Programación</button>
+            <button class="tab-btn" id="tab-02">Diseño</button>
+            <button class="tab-btn" id="tab-03">Estudio</button>
+            <button class="tab-btn" id="tab-04">Biblioteca</button>
+            <button class="tab-btn" id="tab-05">Otros</button>
             <div class="tab-line"></div>
         </div>
         <div class="tab-contents">
             <div class="tab-content tab-active">
                 <h4>Programación</h4>
                 <p>Esta Pagina - Stacks - C, c++ - github y eso</p>
+
+                <div class="tab-lists">
+                    <div class="wide-list" id="wideListPurple">
+                        <div class="list-title" id="list01" onclick="openList(this)">
+                            <div class="list-dot"></div>
+                            <p>Esta Pagina</p>
+                            <div class="list-bar"></div>
+                        </div>
+                        <div class="list-content" id="contentlist01">
+                            <ul>
+                                <li id="dotJs">JavaScript<div class="list-item-bar"></div></li>
+                                <li id="dotNd">Node.Js</li>
+                                <li>Express</li>
+                            </ul>
+                            <ul>
+                                <li id="dotScss">SCSS<div class="list-item-bar"></div></li>
+                                <li>Handlebars</li>
+                                <li>Lottie.Js</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="wide-list" id="wideListPurple">
+                        <div class="list-title" id="list02" onclick="openList(this)">
+                            <div class="list-dot"></div>
+                            <p>Desarrollo Web</p>
+                            <div class="list-bar"></div>
+                        </div>
+                        <div class="list-content" id="contentlist02">
+                            <ul>
+                                <li>JavaScript</li>
+                                <li>Node.Js</li>
+                                <li>Express</li>
+                            </ul>
+                            <ul>
+                                <li>SCSS</li>
+                                <li>Handlebars</li>
+                                <li>Lottie.Js</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="wide-list" id="wideList03">
+                        <div class="list-title" id="list03" onclick="openList(this)">
+                            <div class="list-dot"></div>
+                            <p>C - C++</p>
+                            <div class="list-bar"></div>
+                        </div>
+                        <div class="list-content" id="contentlist03">
+                            <ul>
+                                <li>JavaScript</li>
+                                <li>Node.Js</li>
+                                <li>Express</li>
+                            </ul>
+                            <ul>
+                                <li>SCSS</li>
+                                <li>Handlebars</li>
+                                <li>Lottie.Js</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="wide-list" id="wideList04">
+                        <div class="list-title" id="list04" onclick="openList(this)">
+                            <div class="list-dot"></div>
+                            <p>Github y Otros</p>
+                            <div class="list-bar"></div>
+                        </div>
+                        <div class="list-content" id="contentlist04">
+                            <ul>
+                                <li>JavaScript</li>
+                                <li>Node.Js</li>
+                                <li>Express</li>
+                            </ul>
+                            <ul>
+                                <li>SCSS</li>
+                                <li>Handlebars</li>
+                                <li>Lottie.Js</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="wide-list" id="wideList05">
+                        <div class="list-title" id="list05" onclick="openList(this)">
+                            <div class="list-dot"></div>
+                            <p>Veo</p>
+                            <div class="list-bar"></div>
+                        </div>
+                        <div class="list-content" id="contentlist05">
+                            <ul>
+                                <li>JavaScript</li>
+                                <li>Node.Js</li>
+                                <li>Express</li>
+                            </ul>
+                            <ul>
+                                <li>SCSS</li>
+                                <li>Handlebars</li>
+                                <li>Lottie.Js</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
             <div class="tab-content">
                 <h4>Diseño</h4>
                 <p>Adobe y todo eso</p>
+
+                <div class="tab-lists">
+                    <div class="wide-list" id="wideListPurple">
+                        <div class="list-title no-pointer" id="list06">
+                            <div class="list-dot"></div>
+                            <p>Esta Pagina</p>
+                            <div class="list-bar"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="tab-content">
                 <h4>Estudio</h4>
                 <p>Cursando 3ro con promedio - Idiomas</p>
+                <div class="tab-lists">
+                    <div class="wide-list" id="wideList15">
+                        <div class="list-title" id="list15" onclick="openList(this)">
+                            <div class="list-dot"></div>
+                            <p>Esta Pagina</p>
+                            <div class="list-bar"></div>
+                        </div>
+                        <div class="list-content" id="contentlist15">
+                            <ul>
+                                <li id="dotJs">JavaScript</li>
+                                <li id="dotNd">Node.Js</li>
+                                <li>Express</li>
+                            </ul>
+                            <ul>
+                                <li>SCSS</li>
+                                <li>Handlebars</li>
+                                <li>Lottie.Js</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="tab-content">
                 <h4>Biblioteca</h4>
                 <p>Libros - Cursos</p>
+                <div class="tab-lists">
+                    <div class="wide-list" id="wideList20">
+                        <div class="list-title" id="list20" onclick="openList(this)">
+                            <div class="list-dot"></div>
+                            <p>Esta Pagina</p>
+                            <div class="list-bar"></div>
+                        </div>
+                        <div class="list-content" id="contentlist20">
+                            <ul>
+                                <li id="dotJs">JavaScript</li>
+                                <li id="dotNd">Node.Js</li>
+                                <li>Express</li>
+                            </ul>
+                            <ul>
+                                <li>SCSS</li>
+                                <li>Handlebars</li>
+                                <li>Lottie.Js</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
             </div>
 
             <div class="tab-content">
                 <h4>Otros</h4>
                 <p>Haskell</p>
+                <div class="tab-lists">
+                    <div class="wide-list" id="wideList25">
+                        <div class="list-title" id="list25" onclick="openList(this)">
+                            <div class="list-dot"></div>
+                            <p>Esta Pagina</p>
+                            <div class="list-bar"></div>
+                        </div>
+                        <div class="list-content" id="contentlist25">
+                            <ul>
+                                <li id="dotJs">JavaScript</li>
+                                <li id="dotNd">Node.Js</li>
+                                <li>Express</li>
+                            </ul>
+                            <ul>
+                                <li>SCSS</li>
+                                <li>Handlebars</li>
+                                <li>Lottie.Js</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -106,7 +284,10 @@
     <div class="art-cards">
         <div class="art-card-main">
             <h4>Arte Titulo</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non fugit eligendi corporis ratione dolor culpa corrupti laboriosam! Mollitia at explicabo illo voluptatem architecto dolorum consectetur illum maxime alias eveniet magni, cum distinctio similique a repudiandae deserunt facilis delectus aut adipisci, dicta tempora. Quibusdam deserunt illo cumque unde voluptatum doloremque aut!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non fugit eligendi corporis ratione dolor culpa
+                corrupti laboriosam! Mollitia at explicabo illo voluptatem architecto dolorum consectetur illum maxime
+                alias eveniet magni, cum distinctio similique a repudiandae deserunt facilis delectus aut adipisci,
+                dicta tempora. Quibusdam deserunt illo cumque unde voluptatum doloremque aut!</p>
         </div>
         <div class="art-card">
             <img src="/img/perfil.png" alt="">

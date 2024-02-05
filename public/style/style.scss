@@ -37,8 +37,8 @@ body {
 
 /* Selection */
 ::selection {
-  color: #000;
-  background: #a079d0;
+  color: #fff;
+  background: crimson;
 }
 
 /** Global **/
@@ -60,6 +60,15 @@ ul {
   list-style-type: none;
 }
 
+h2 {
+  position: relative;
+  font-size: 8vw;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 900;
+  line-height: 8vw;
+}
+
 /** Utilities **/
 /* Usuals */
 .fullscreen {
@@ -68,6 +77,17 @@ ul {
   width: calc(var(--vw, 1vw) * 100);
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
+}
+
+.animation-hat {
+  position: absolute;
+  z-index: 4;
+  right: -2rem;
+  top: 0;
+}
+
+.no-pointer {
+  cursor: default!important;
 }
 
 /* Displays */
