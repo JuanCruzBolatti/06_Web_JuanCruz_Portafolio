@@ -116,6 +116,27 @@ var animationHat01 = bodymovin.loadAnimation({
     autoplay: false,
     path: '/js/animation/animation-hat-01.lottie.json'
 });
+var animation = bodymovin.loadAnimation({
+    container: document.getElementById('animation-art-01'),
+    rederer: 'svg',
+    loop: false,
+    autoplay: true,
+    path: '/js/animation/animation-hat-01.lottie.json'
+});
+var animation = bodymovin.loadAnimation({
+    container: document.getElementById('animation-art-02'),
+    rederer: 'svg',
+    loop: false,
+    autoplay: true,
+    path: '/js/animation/animation-hat-01.lottie.json'
+});
+var animation = bodymovin.loadAnimation({
+    container: document.getElementById('animation-art-03'),
+    rederer: 'svg',
+    loop: false,
+    autoplay: true,
+    path: '/js/animation/animation-hat-01.lottie.json'
+});
 
 // Tab
 const tabs = document.querySelectorAll('.tab-btn');
@@ -147,4 +168,16 @@ function openList(list) {
     } else {
         contentList.style.maxHeight = (contentList.scrollHeight + 25) + "px";
     }
+}
+
+// Home Button Position
+document.querySelector("#homeToPortfolioButton").onmousemove = e => {
+    const bg = document.querySelector("#homeToPortfolioButton");
+    const rect = bg.getBoundingClientRect(),
+      x = e.clientX - rect.left,
+      y = e.clientY - rect.top;
+    
+    bg.style.setProperty("--bg-x", `${x}px`);
+    bg.style.setProperty("--bg-y", `${y}px`);    
+  
 }

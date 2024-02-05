@@ -12,9 +12,14 @@
                 </div>
             </button>
 
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet ipsa, fugiat, nihil earum eos velit vel
-                laudantium quis eaque nostrum ratione. Laboriosam nulla nobis nesciunt? Itaque sequi ipsam nisi vero
-                dolores, hic architecto assumenda velit dolore recusandae labore provident. Non!</p>
+            <div>
+                <p>¡Buenas! Soy un programador enfocado en la fusión creativa de diseño y funcionalidad. Me especializo
+                    en páginas web llamativas y accesibles, utilizando diversas herramientas para superar tus
+                    expectativas. Además, brindo los servicios necesarios para suplir tus necesidades digitales.</p>
+
+                <a href="#portfolio" id="homeToPortfolioButton">Conoce todos los servicios</a>
+            </div>
+
         </div>
     </div>
 
@@ -25,7 +30,7 @@
 
 {{> about }}
 
-<section class="container portfolio">
+<section class="container portfolio" id="portfolio">
     <h2>Mi Trabajo<div id="animation-hat-01" class="animation-hat" style="width: 10%;"></div>
     </h2>
     <div class="portfolio-cards">
@@ -58,6 +63,12 @@
     </div>
 </section>
 
+<section class="container" style="margin-top: 10rem;">
+    <h2>Servicios</h2>
+    <p>Lo tengo que pensar, pero quizas hago una seccion de servicios (quizas justo abajo de portafolio) con cosas como
+        hacer la web, sacar las fotos, hacer los textos, corregir textos, maquetacion, pdfs</p>
+</section>
+
 <section class="container knowledge">
     <h2>Conocimientos</h2>
 
@@ -84,12 +95,14 @@
                         </div>
                         <div class="list-content" id="contentlist01">
                             <ul>
-                                <li id="dotJs">JavaScript<div class="list-item-bar"></div></li>
+                                <li id="dotJs">JavaScript<div class="list-item-bar"></div>
+                                </li>
                                 <li id="dotNd">Node.Js</li>
                                 <li>Express</li>
                             </ul>
                             <ul>
-                                <li id="dotScss">SCSS<div class="list-item-bar"></div></li>
+                                <li id="dotScss">SCSS<div class="list-item-bar"></div>
+                                </li>
                                 <li>Handlebars</li>
                                 <li>Lottie.Js</li>
                             </ul>
@@ -282,22 +295,45 @@
     <h2>Arte</h2>
 
     <div class="art-cards">
-        <div class="art-card-main">
-            <h4>Arte Titulo</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non fugit eligendi corporis ratione dolor culpa
-                corrupti laboriosam! Mollitia at explicabo illo voluptatem architecto dolorum consectetur illum maxime
-                alias eveniet magni, cum distinctio similique a repudiandae deserunt facilis delectus aut adipisci,
-                dicta tempora. Quibusdam deserunt illo cumque unde voluptatum doloremque aut!</p>
+
+        <div>
+            <div class="art-card art-card-main" style="height: 60vh; background-color: red;">
+                <h4>Arte Titulo</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non fugit eligendi corporis ratione dolor
+                    culpa
+                    corrupti laboriosam! Mollitia at explicabo illo voluptatem architecto dolorum consectetur illum
+                    maxime
+                    alias eveniet magni, cum distinctio similique a repudiandae deserunt facilis delectus aut adipisci,
+                    dicta tempora. Quibusdam deserunt illo cumque unde voluptatum doloremque aut!</p>
+            </div>
+
+            <div class="art-card" style="height: 30vh; background-color: blue;">
+                <img src="/img/perfil.png" alt="">
+                <div id="animation-art-01"></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci aperiam maiores magnam molestias,
+                    doloremque alias omnis reprehenderit dolore facilis est eveniet corrupti minima fugit! Rem, nam?
+                    Dolor voluptas minima ex.</p>
+            </div>
         </div>
-        <div class="art-card">
-            <img src="/img/perfil.png" alt="">
+
+        <div>
+            <div class="art-card" style="height: 50vh; background-color: rgb(0, 255, 0);">
+                <img src="/img/perfil.png" alt="">
+                <div id="animation-art-02"></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci aperiam maiores magnam molestias,
+                    doloremque alias omnis reprehenderit dolore facilis est eveniet corrupti minima fugit! Rem, nam?
+                    Dolor voluptas minima ex.</p>
+            </div>
+
+            <div class="art-card" style="height: 40vh; background-color: rgb(255, 0, 255);">
+                <img src="/img/perfil.png" alt="">
+                <div id="animation-art-03"></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci aperiam maiores magnam molestias,
+                    doloremque alias omnis reprehenderit dolore facilis est eveniet corrupti minima fugit! Rem, nam?
+                    Dolor voluptas minima ex.</p>
+            </div>
         </div>
-        <div class="art-card">
-            <img src="/img/perfil.png" alt="">
-        </div>
-        <div class="art-card">
-            <img src="/img/perfil.png" alt="">
-        </div>
+
     </div>
 </section>
 
@@ -306,5 +342,5 @@
 </section>
 
 <footer class="container footer">
-
+    <p>Footer Yeah!</p>
 </footer>
