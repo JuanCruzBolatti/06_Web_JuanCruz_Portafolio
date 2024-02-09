@@ -112,11 +112,14 @@
     transition: .3s ease-in-out;
 
     border-radius: 15px;
-    background: rgb(159,193,234);
-    background: linear-gradient(122deg, rgba(72,77,168,0.25) 0%, rgba(63,132,213,0.25) 100%);
+    background: rgb(189,128,227);
+    background: radial-gradient(circle, rgba(118,177,228,0.4) 0%, rgba(189,128,227,0.4) 100%);
     -webkit-backdrop-filter: saturate(180%) blur(50px);
     backdrop-filter: saturate(180%) blur(50px);
-    outline: 1.5px solid rgba(64,64,170,0.4);
+    outline: 2px solid rgba(64,64,170,0.4);
+
+    background-size: 200%;
+    background-position: var(--bg-x) var(--bg-y);
 
     display: flex;
     flex-direction: column;
@@ -149,3 +152,16 @@
     }
 }
 
+@media only screen and (max-width: 1280px) {
+    .about {
+        width: 55vw;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .about {
+        right: 0;
+        left: 15vw;
+        width: 70vw;
+    }
+}

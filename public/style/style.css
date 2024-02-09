@@ -624,11 +624,13 @@ h2 {
   opacity: 1;
   transition: 0.3s ease-in-out;
   border-radius: 15px;
-  background: rgb(159, 193, 234);
-  background: linear-gradient(122deg, rgba(72, 77, 168, 0.25) 0%, rgba(63, 132, 213, 0.25) 100%);
+  background: rgb(189, 128, 227);
+  background: radial-gradient(circle, rgba(118, 177, 228, 0.4) 0%, rgba(189, 128, 227, 0.4) 100%);
   -webkit-backdrop-filter: saturate(180%) blur(50px);
   backdrop-filter: saturate(180%) blur(50px);
-  outline: 1.5px solid rgba(64, 64, 170, 0.4);
+  outline: 2px solid rgba(64, 64, 170, 0.4);
+  background-size: 200%;
+  background-position: var(--bg-x) var(--bg-y);
   display: flex;
   flex-direction: column;
 }
@@ -655,6 +657,18 @@ h2 {
     opacity: 1;
   }
 }
+@media only screen and (max-width: 1280px) {
+  .about {
+    width: 55vw;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .about {
+    right: 0;
+    left: 15vw;
+    width: 70vw;
+  }
+}
 /** Portfolio **/
 .portfolio {
   margin-top: 10rem;
@@ -662,7 +676,7 @@ h2 {
 .portfolio .portfolio-cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 3rem;
+  gap: 1rem 2rem;
 }
 .portfolio .portfolio-cards .portfolio-card {
   position: relative;
@@ -708,13 +722,16 @@ h2 {
   color: #000;
   padding: 0.5rem 1rem;
   border-radius: 13px;
+  outline: 0px solid rgba(64, 64, 170, 0.2);
   transition: 0.3s ease-in-out;
+  transition: outline 0.15s ease-in-out;
 }
 .portfolio .portfolio-cards .portfolio-card .portfolio-card-content a:hover {
   color: #fff;
   background-color: rgba(0, 0, 0, 0.2);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
+  outline: 3px solid rgba(64, 64, 170, 0.6);
 }
 .portfolio .portfolio-cards .portfolio-card:hover img {
   height: 110%;
@@ -726,6 +743,36 @@ h2 {
 .portfolio .portfolio-cards .portfolio-card:hover .portfolio-card-content h3 {
   line-height: 4vw;
 }
+.portfolio .portfolio-cards .portfolio-mini-card {
+  background: rgb(128, 193, 227);
+  background: radial-gradient(circle, rgba(128, 193, 227, 0.4) 0%, rgba(177, 228, 189, 0.4) 100%);
+  background-size: 200% !important;
+  background-position: 0%;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgb(138, 207, 244);
+  padding: 0 2rem;
+  transition: 0.3s ease-in-out;
+}
+.portfolio .portfolio-cards .portfolio-mini-card .portfolio-card-content h3 {
+  margin-bottom: 0.5rem;
+}
+.portfolio .portfolio-cards .portfolio-mini-card .portfolio-card-content p {
+  margin-top: 0.7rem;
+}
+.portfolio .portfolio-cards .portfolio-mini-card:hover {
+  background-position: 100% !important;
+}
+.portfolio .portfolio-cards .portfolio-mini-card:nth-child(4) {
+  background: rgb(158, 0, 255);
+  background: radial-gradient(circle, rgba(158, 0, 255, 0.2) 0%, rgba(213, 63, 129, 0.2) 100%);
+  border: 1px solid rgb(211, 140, 255);
+}
+.portfolio .portfolio-cards .portfolio-mini-card:last-child {
+  background: rgb(227, 198, 128);
+  background: radial-gradient(circle, rgba(228, 177, 177, 0.4) 0%, rgba(227, 198, 128, 0.4) 100%);
+  border: 1px solid rgb(227, 198, 128);
+}
 
 @media only screen and (max-width: 1280px) {
   .portfolio .portfolio-cards {
@@ -736,6 +783,21 @@ h2 {
   }
   .portfolio .portfolio-cards .portfolio-card .portfolio-card-content p {
     width: 65%;
+  }
+}
+@media only screen and (max-width: 810px) {
+  .portfolio .portfolio-cards {
+    grid-template-columns: 1fr;
+  }
+  .portfolio .portfolio-cards .portfolio-card {
+    height: 30vh;
+  }
+  .portfolio .portfolio-cards .portfolio-card img {
+    width: 100%;
+  }
+  .portfolio .portfolio-cards .portfolio-card .portfolio-card-content h3 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
   }
 }
 /** Knowledge **/
@@ -757,7 +819,6 @@ h2 {
 .knowledge .tab .tab-box .tab-btn {
   font-size: 2rem;
   color: #fff;
-  background-color: crimson;
   border: none;
   padding: 2rem;
   cursor: pointer;
@@ -774,10 +835,10 @@ h2 {
   background-color: #47a59d;
 }
 .knowledge .tab .tab-box .tab-btn#tab-04 {
-  background-color: #cc3838;
+  background-color: #ed5e2f;
 }
 .knowledge .tab .tab-box .tab-btn#tab-05 {
-  background-color: #ca387a;
+  background-color: #cc3838;
 }
 .knowledge .tab .tab-box .tab-active {
   color: #000000;
@@ -825,7 +886,7 @@ h2 {
   display: grid;
   padding: 1.2rem 2.3rem;
   gap: 1rem;
-  grid-template-columns: 0.8rem auto 10rem;
+  grid-template-columns: 0.8rem auto 20rem;
   align-items: center;
   cursor: pointer;
 }
@@ -872,6 +933,7 @@ h2 {
 .knowledge .tab .tab-contents .tab-content .tab-lists .wide-list .list-content ul li {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 3rem;
   position: relative;
   margin: 0.2rem 0;
@@ -891,7 +953,7 @@ h2 {
 }
 .knowledge .tab .tab-contents .tab-content .tab-lists .wide-list .list-content ul li .list-item-bar {
   position: relative;
-  width: 100%;
+  width: 50%;
   height: 0.7rem;
   border-radius: 5px;
   background-color: #dadada;
@@ -955,6 +1017,29 @@ h2 {
   }
   .knowledge .tab .tab-contents .tab-content .tab-lists .wide-list .list-content ul:nth-child(2) {
     margin-right: 1rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .knowledge .tab .tab-box .tab-btn {
+    font-size: 1.5rem;
+    padding: 1rem 1.5rem;
+  }
+  .knowledge .tab .tab-contents .tab-content h4 {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+  }
+  .knowledge .tab .tab-contents .tab-content p {
+    margin: 0.5rem 0;
+    text-align: justify;
+  }
+  .knowledge .tab .tab-contents .tab-content .tab-lists {
+    grid-template-columns: 1fr;
+  }
+  .knowledge .tab .tab-contents .tab-content .tab-lists .wide-list {
+    width: calc(90% - 0.5rem);
+  }
+  .knowledge .tab .tab-contents .tab-content .tab-lists .wide-list .list-title {
+    width: 100%;
   }
 }
 /** Art **/

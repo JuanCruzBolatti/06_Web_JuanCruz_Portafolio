@@ -153,7 +153,12 @@ tabs.forEach((tab, index)=>{
         line.style.backgroundColor = window.getComputedStyle(tabs[index], null).getPropertyValue('background-color');
 
         tabContents.forEach(content => {content.classList.remove('tab-active')});
-        tabContents[index].classList.add('tab-active');
+       
+        if(document.documentElement.clientWidth < 769) {
+            tabContents[index - 5].classList.add('tab-active');
+        } else {
+            tabContents[index].classList.add('tab-active');
+        }
     });
 });
 
@@ -179,5 +184,14 @@ document.querySelector("#homeToPortfolioButton").onmousemove = e => {
     
     bg.style.setProperty("--bg-x", `${x}px`);
     bg.style.setProperty("--bg-y", `${y}px`);    
-  
+}
+
+document.querySelector(".about").onmousemove = e => {
+    const bg = document.querySelector(".about");
+    const rect = bg.getBoundingClientRect(),
+      x = e.clientX - rect.left,
+      y = e.clientY - rect.top;
+    
+    bg.style.setProperty("--bg-x", `${x}px`);
+    bg.style.setProperty("--bg-y", `${y}px`);    
 }

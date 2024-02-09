@@ -33,11 +33,13 @@
 <section class="container portfolio" id="portfolio">
     <h2>Mi Trabajo<div id="animation-hat-01" class="animation-hat" style="width: 10%;"></div>
     </h2>
+
     <div class="portfolio-cards">
+
         <div class="portfolio-card">
             <div class="portfolio-card-content">
-                <h3>Portafolios</h3>
-                <p>La mejor forma de mostrar tu trabajo!</p>
+                <h3>Empresariales</h3>
+                <p>Para que se de a conocer tu Empresa!</p>
                 <a href="#"> Visitar </a>
             </div>
             <img src="/img/perfil.png" alt="">
@@ -45,8 +47,8 @@
 
         <div class="portfolio-card">
             <div class="portfolio-card-content">
-                <h3>Empresariales</h3>
-                <p>Para que se de a conocer tu Empresa!</p>
+                <h3>Portafolios</h3>
+                <p>La mejor forma de mostrar tu trabajo!</p>
                 <a href="#"> Visitar </a>
             </div>
             <img src="/img/perfil.png" alt="">
@@ -60,20 +62,38 @@
             </div>
             <img src="/img/perfil.png" alt="">
         </div>
-    </div>
-</section>
 
-<section class="container" style="margin-top: 10rem;">
-    <h2>Servicios</h2>
-    <p>Lo tengo que pensar, pero quizas hago una seccion de servicios (quizas justo abajo de portafolio) con cosas como
-        hacer la web, sacar las fotos, hacer los textos, corregir textos, maquetacion, pdfs</p>
+        <a href="#contacto" class="portfolio-mini-card">
+            <div class="portfolio-card-content">
+                <h3>Desarrollo Web</h3>
+                <p>Desde el principio hasta el fin, te acompaño durante todo el proceso del desarrollo de la pagina,
+                    desde el diseño hasta las fotos, la redaccion y correcion de textos, hasta la publicacion y
+                    mantenimiento.</p>
+            </div>
+        </a>
+
+        <a href="#" class="portfolio-mini-card">
+            <div class="portfolio-card-content">
+                <h3>Personal</h3>
+                <p>cv y linkedin</p>
+            </div>
+        </a>
+
+        <a href="#" class="portfolio-mini-card">
+            <div class="portfolio-card-content">
+                <h3>Artístico</h3>
+                <p>Maquetacion, correcion y revision de textos</p>
+            </div>
+        </a>
+
+    </div>
 </section>
 
 <section class="container knowledge">
     <h2>Conocimientos</h2>
 
     <div class="tab">
-        <div class="tab-box">
+        <div class="display-pc tab-box">
             <button class="tab-btn tab-active" id="tab-01">Programación</button>
             <button class="tab-btn" id="tab-02">Diseño</button>
             <button class="tab-btn" id="tab-03">Estudio</button>
@@ -81,17 +101,27 @@
             <button class="tab-btn" id="tab-05">Otros</button>
             <div class="tab-line"></div>
         </div>
+
+        <div class="display-mobile tab-box">
+            <button class="tab-btn tab-active" id="tab-01">P</button>
+            <button class="tab-btn" id="tab-02">D</button>
+            <button class="tab-btn" id="tab-03">E</button>
+            <button class="tab-btn" id="tab-04">B</button>
+            <button class="tab-btn" id="tab-05">O</button>
+            <div class="tab-line display-pc"></div>
+        </div>
+
         <div class="tab-contents">
             <div class="tab-content tab-active">
                 <h4>Programación</h4>
-                <p>Esta Pagina - Stacks - C, c++ - github y eso</p>
+                <p>Desarrollo web desde el principio hasta el fin, y estudios propios</p>
 
                 <div class="tab-lists">
+
                     <div class="wide-list" id="wideListPurple">
                         <div class="list-title" id="list01" onclick="openList(this)">
                             <div class="list-dot"></div>
                             <p>Esta Pagina</p>
-                            <div class="list-bar"></div>
                         </div>
                         <div class="list-content" id="contentlist01">
                             <ul>
@@ -113,18 +143,23 @@
                         <div class="list-title" id="list02" onclick="openList(this)">
                             <div class="list-dot"></div>
                             <p>Desarrollo Web</p>
-                            <div class="list-bar"></div>
                         </div>
                         <div class="list-content" id="contentlist02">
                             <ul>
-                                <li>JavaScript</li>
-                                <li>Node.Js</li>
-                                <li>Express</li>
+                                <li id="dotHtml">HTML<div class="list-item-bar"></div>
+                                <li id="dotCss">CSS<div class="list-item-bar"></div>
+                                <li id="dotScss">SCSS<div class="list-item-bar"></div>
+                                <li id="dotScss">Lottie.Js<div class="list-item-bar"></div>
+                                <li id="dotScss">WordPress<div class="list-item-bar"></div>
+                                <li id="dotScss">React<div class="list-item-bar"></div>
                             </ul>
                             <ul>
-                                <li>SCSS</li>
-                                <li>Handlebars</li>
-                                <li>Lottie.Js</li>
+                                <li id="dotScss">JavaScript<div class="list-item-bar"></div>
+                                <li id="dotScss">Node.Js<div class="list-item-bar"></div>
+                                <li id="dotScss">Handlebars<div class="list-item-bar"></div>
+                                <li id="dotScss">Express<div class="list-item-bar"></div>
+                                <li id="dotScss">MongoDB<div class="list-item-bar"></div>
+                                <li id="dotScss">Rest<div class="list-item-bar"></div>
                             </ul>
                         </div>
                     </div>
@@ -133,18 +168,22 @@
                         <div class="list-title" id="list03" onclick="openList(this)">
                             <div class="list-dot"></div>
                             <p>C - C++</p>
-                            <div class="list-bar"></div>
                         </div>
                         <div class="list-content" id="contentlist03">
                             <ul>
-                                <li>JavaScript</li>
-                                <li>Node.Js</li>
-                                <li>Express</li>
+                                <li id="dotScss">Tipos, Operadores y Expresiones<div class="list-item-bar"></div>
+                                <li id="dotScss">Control de Flujo<div class="list-item-bar"></div>
+                                <li id="dotScss">Funciones y Estructuras del Programa<div class="list-item-bar"></div>
+                                <li id="dotScss">Pointers y Arrays<div class="list-item-bar"></div>
                             </ul>
                             <ul>
-                                <li>SCSS</li>
-                                <li>Handlebars</li>
-                                <li>Lottie.Js</li>
+                                <li id="dotScss">Estructuras<div class="list-item-bar"></div>
+                                <li id="dotScss">Input y Output<div class="list-item-bar"></div>
+                                <li id="dotScss">Clases<div class="list-item-bar"></div>
+                                <li id="dotScss">Overloading<div class="list-item-bar"></div>
+                                <li id="dotScss">Templates<div class="list-item-bar"></div>
+                                <li id="dotScss">Excepciones<div class="list-item-bar"></div>
+                                <li id="dotScss">Bibliotecas Estandar<div class="list-item-bar"></div>
                             </ul>
                         </div>
                     </div>
@@ -153,38 +192,13 @@
                         <div class="list-title" id="list04" onclick="openList(this)">
                             <div class="list-dot"></div>
                             <p>Github y Otros</p>
-                            <div class="list-bar"></div>
                         </div>
                         <div class="list-content" id="contentlist04">
                             <ul>
-                                <li>JavaScript</li>
-                                <li>Node.Js</li>
-                                <li>Express</li>
+                                <li id="dotScss">Github<div class="list-item-bar"></div>
                             </ul>
                             <ul>
-                                <li>SCSS</li>
-                                <li>Handlebars</li>
-                                <li>Lottie.Js</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="wide-list" id="wideList05">
-                        <div class="list-title" id="list05" onclick="openList(this)">
-                            <div class="list-dot"></div>
-                            <p>Veo</p>
-                            <div class="list-bar"></div>
-                        </div>
-                        <div class="list-content" id="contentlist05">
-                            <ul>
-                                <li>JavaScript</li>
-                                <li>Node.Js</li>
-                                <li>Express</li>
-                            </ul>
-                            <ul>
-                                <li>SCSS</li>
-                                <li>Handlebars</li>
-                                <li>Lottie.Js</li>
+                                <li id="dotScss">Linux<div class="list-item-bar"></div>
                             </ul>
                         </div>
                     </div>
@@ -200,36 +214,93 @@
                     <div class="wide-list" id="wideListPurple">
                         <div class="list-title no-pointer" id="list06">
                             <div class="list-dot"></div>
-                            <p>Esta Pagina</p>
+                            <p>Photoshop</p>
+                            <div class="list-bar"></div>
+                        </div>
+                    </div>
+                    <div class="wide-list" id="wideListPurple">
+                        <div class="list-title no-pointer" id="list06">
+                            <div class="list-dot"></div>
+                            <p>DaVinci Resolve</p>
+                            <div class="list-bar"></div>
+                        </div>
+                    </div>
+                    <div class="wide-list" id="wideListPurple">
+                        <div class="list-title no-pointer" id="list06">
+                            <div class="list-dot"></div>
+                            <p>Fusion 360</p>
+                            <div class="list-bar"></div>
+                        </div>
+                    </div>
+                    <div class="wide-list" id="wideListPurple">
+                        <div class="list-title no-pointer" id="list06">
+                            <div class="list-dot"></div>
+                            <p>InDesign</p>
+                            <div class="list-bar"></div>
+                        </div>
+                    </div>
+                    <div class="wide-list" id="wideListPurple">
+                        <div class="list-title no-pointer" id="list06">
+                            <div class="list-dot"></div>
+                            <p>Fable</p>
+                            <div class="list-bar"></div>
+                        </div>
+                    </div>
+                    <div class="wide-list" id="wideListPurple">
+                        <div class="list-title no-pointer" id="list06">
+                            <div class="list-dot"></div>
+                            <p>Premiere</p>
+                            <div class="list-bar"></div>
+                        </div>
+                    </div>
+                    <div class="wide-list" id="wideListPurple">
+                        <div class="list-title no-pointer" id="list06">
+                            <div class="list-dot"></div>
+                            <p>Audacity</p>
                             <div class="list-bar"></div>
                         </div>
                     </div>
                 </div>
+
             </div>
 
             <div class="tab-content">
                 <h4>Estudio</h4>
                 <p>Cursando 3ro con promedio - Idiomas</p>
                 <div class="tab-lists">
-                    <div class="wide-list" id="wideList15">
-                        <div class="list-title" id="list15" onclick="openList(this)">
+
+                    <div class="wide-list" id="wideListPurple">
+                        <div class="list-title no-pointer" id="list06">
                             <div class="list-dot"></div>
-                            <p>Esta Pagina</p>
+                            <p>Inglés</p>
                             <div class="list-bar"></div>
                         </div>
-                        <div class="list-content" id="contentlist15">
+                    </div>
+
+                    <div class="wide-list" id="wideListPurple">
+                        <div class="list-title no-pointer" id="list06">
+                            <div class="list-dot"></div>
+                            <p>Italiano</p>
+                            <div class="list-bar"></div>
+                        </div>
+                    </div>
+
+                    <div class="wide-list" id="wideListPurple">
+                        <div class="list-title" id="list05" onclick="openList(this)">
+                            <div class="list-dot"></div>
+                            <p>Ingeniería en Sistemas de Información</p>
+                        </div>
+                        <div class="list-content" id="contentlist05">
                             <ul>
-                                <li id="dotJs">JavaScript</li>
-                                <li id="dotNd">Node.Js</li>
-                                <li>Express</li>
+                                <li id="dotJs">Curso 3er Año<div class="list-item-bar"></div></li>
                             </ul>
                             <ul>
-                                <li>SCSS</li>
-                                <li>Handlebars</li>
-                                <li>Lottie.Js</li>
+                                <li id="dotScss">Promedio<div class="list-item-bar"></div>
+                                </li>
                             </ul>
                         </div>
                     </div>
+
                 </div>
             </div>
 
@@ -262,15 +333,34 @@
 
             <div class="tab-content">
                 <h4>Otros</h4>
-                <p>Haskell</p>
                 <div class="tab-lists">
                     <div class="wide-list" id="wideList25">
                         <div class="list-title" id="list25" onclick="openList(this)">
                             <div class="list-dot"></div>
-                            <p>Esta Pagina</p>
+                            <p>Haskell</p>
                             <div class="list-bar"></div>
                         </div>
                         <div class="list-content" id="contentlist25">
+                            <ul>
+                                <li id="dotJs">JavaScript</li>
+                                <li id="dotNd">Node.Js</li>
+                                <li>Express</li>
+                            </ul>
+                            <ul>
+                                <li>SCSS</li>
+                                <li>Handlebars</li>
+                                <li>Lottie.Js</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="wide-list" id="wideList26">
+                        <div class="list-title" id="list26" onclick="openList(this)">
+                            <div class="list-dot"></div>
+                            <p>Prolog</p>
+                            <div class="list-bar"></div>
+                        </div>
+                        <div class="list-content" id="contentlist26">
                             <ul>
                                 <li id="dotJs">JavaScript</li>
                                 <li id="dotNd">Node.Js</li>

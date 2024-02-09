@@ -92,20 +92,20 @@ h2 {
 
 /* Displays */
 .display-mobile {
-  display: block !important;
+  display: block!important;
 }
 
 .display-pc {
-  display: none !important;
+  display: none!important;
 }
 
 @media only screen and (min-width: 768px) {
   .display-mobile {
-    display: none !important;
+    display: none!important;
   }
 
   .display-pc {
-    display: block !important;
+    display: block!important;
   }
 }
 

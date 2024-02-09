@@ -4,7 +4,7 @@
     .portfolio-cards {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 3rem;
+        gap: 1rem 2rem;
 
         .portfolio-card {
             position: relative;
@@ -52,13 +52,16 @@
                     color: #000;
                     padding: .5rem 1rem;
                     border-radius: 13px;
+                    outline: 0px solid rgba(64, 64, 170, 0.2);
                     transition: .3s ease-in-out;
+                    transition: outline .15s ease-in-out;
 
                     &:hover {
                         color: #fff;
                         background-color: rgba(0, 0, 0, 0.2);
                         -webkit-backdrop-filter: saturate(180%) blur(20px);
                         backdrop-filter: saturate(180%) blur(20px);
+                        outline: 3px solid rgba(64, 64, 170, 0.6);
                     }
                 }
             }
@@ -80,9 +83,47 @@
             }
         }
 
+        .portfolio-mini-card {
+            background: rgb(128,193,227);
+            background: radial-gradient(circle, rgba(128,193,227,0.4) 0%, rgba(177,228,189,0.4) 100%);
+            background-size: 200%!important;
+            background-position: 0%;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgb(138, 207, 244);
+            padding: 0 2rem;
+            transition: .3s ease-in-out;
+
+            .portfolio-card-content {
+                h3 {
+                    margin-bottom: .5rem;
+                }
+
+                p {
+                    margin-top: .7rem;
+                }
+            }
+
+            &:hover {
+                background-position: 100%!important;
+            }
+
+            &:nth-child(4) {
+                background: rgb(158,0,255);
+                background: radial-gradient(circle, rgba(158,0,255,.2) 0%, rgba(213,63,129,.2) 100%);
+                border: 1px solid rgb(211, 140, 255);
+            }
+
+            &:last-child {
+                background: rgb(227,198,128);
+                background: radial-gradient(circle, rgba(228,177,177,0.4) 0%, rgba(227,198,128,0.4) 100%);
+                border: 1px solid rgb(227,198,128);
+            }
+
+        }
+
     }
 }
-
 
 @media only screen and (max-width: 1280px) {
     .portfolio {
@@ -95,6 +136,29 @@
                 .portfolio-card-content {
                     p {
                         width: 65%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 810px) {
+    .portfolio {
+        .portfolio-cards {
+            grid-template-columns: 1fr;
+
+            .portfolio-card {
+                height: 30vh;
+
+                img {
+                    width: 100%;
+                }
+
+                .portfolio-card-content {
+                    h3 {
+                        font-size: 3rem;
+                        margin-bottom: 2rem;
                     }
                 }
             }
