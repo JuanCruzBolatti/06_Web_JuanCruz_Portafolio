@@ -173,7 +173,7 @@ h2 {
   text-align: center;
   align-items: center;
   padding: 1rem 0;
-  width: 22%;
+  width: 36%;
   font-size: 2rem;
   font-weight: bold;
   background-color: crimson;
@@ -977,14 +977,171 @@ h2 {
 }
 #wideListPurple .list-bar::after {
   background-color: #4850ab;
+  width: 100%;
+}
+
+#wideListBlue {
+  border: #4080d1 2px solid;
+}
+#wideListBlue .list-dot {
+  background-color: #4080d1;
+}
+#wideListBlue .list-bar::after {
+  background-color: #4080d1;
+  width: 100%;
+}
+#wideListBlue #listCpp .list-bar::after {
+  width: 45%;
+}
+
+#wideListOrange {
+  border: #ed5e2f 2px solid;
+}
+#wideListOrange .list-dot {
+  background-color: #ed5e2f;
+}
+#wideListOrange .list-bar::after {
+  background-color: #ed5e2f;
   width: 60%;
+}
+
+#wideListPhotoshop {
+  border: #2fa3f7 2px solid;
+}
+#wideListPhotoshop .list-dot {
+  background-color: #2fa3f7;
+}
+#wideListPhotoshop .list-bar::after {
+  background-color: #2fa3f7;
+  width: 75%;
+}
+
+#wideListDaVinci {
+  border: #ff644c 2px solid;
+}
+#wideListDaVinci .list-dot {
+  background-color: #ff644c;
+}
+#wideListDaVinci .list-bar::after {
+  background-color: #ff644c;
+  width: 60%;
+}
+
+#wideListFusion {
+  border: #ff6b00 2px solid;
+}
+#wideListFusion .list-dot {
+  background-color: #ff6b00;
+}
+#wideListFusion .list-bar::after {
+  background-color: #ff6b00;
+  width: 35%;
+}
+
+#wideListInDesign {
+  border: #ff517c 2px solid;
+}
+#wideListInDesign .list-dot {
+  background-color: #ff517c;
+}
+#wideListInDesign .list-bar::after {
+  background-color: #ff517c;
+  width: 35%;
+}
+
+#wideListFable {
+  border: #7777ff 2px solid;
+}
+#wideListFable .list-dot {
+  background-color: #7777ff;
+}
+#wideListFable .list-bar::after {
+  background-color: #7777ff;
+  width: 55%;
+}
+
+#wideListPremiere {
+  border: #9494f7 2px solid;
+}
+#wideListPremiere .list-dot {
+  background-color: #9494f7;
+}
+#wideListPremiere .list-bar::after {
+  background-color: #9494f7;
+  width: 55%;
+}
+
+#wideListAudacity {
+  border: #ff4444 2px solid;
+}
+#wideListAudacity .list-dot {
+  background-color: #ff4444;
+}
+#wideListAudacity .list-bar::after {
+  background-color: #ff4444;
+  width: 70%;
+}
+
+#wideListEnglish {
+  border: #eb1c4d 2px solid;
+}
+#wideListEnglish .list-dot {
+  background-color: #eb1c4d;
+}
+#wideListEnglish .list-bar::after {
+  background-color: #eb1c4d;
+  width: 50%;
+}
+
+#wideListItalian {
+  border: #009052 2px solid;
+}
+#wideListItalian .list-dot {
+  background-color: #009052;
+}
+#wideListItalian .list-bar::after {
+  background-color: #009052;
+  width: 20%;
+}
+
+#wideListUniversity {
+  border: #47a59d 2px solid;
+}
+#wideListUniversity .list-dot {
+  background-color: #47a59d;
+}
+#wideListUniversity .list-bar::after {
+  background-color: #47a59d;
+  width: 20%;
+}
+
+#wideListHaskell {
+  border: #5b4d82 2px solid;
+}
+#wideListHaskell .list-dot {
+  background-color: #5b4d82;
+}
+#wideListHaskell .list-bar::after {
+  background-color: #5b4d82;
+  width: 20%;
+}
+
+#wideListProlog {
+  border: #ed8122 2px solid;
+}
+#wideListProlog .list-dot {
+  background-color: #ed8122;
+}
+#wideListProlog .list-bar::after {
+  background-color: #ed8122;
+  width: 20%;
 }
 
 #dotJs::before {
   background-color: #ffcc00;
 }
 #dotJs .list-item-bar::after {
-  width: 60%;
+  width: 40%;
   background-color: #ffcc00;
 }
 
@@ -996,7 +1153,99 @@ h2 {
   background-color: #c76494;
 }
 
+#dotCss::before {
+  background-color: #3595cf;
+}
+#dotCss .list-item-bar::after {
+  width: 90%;
+  background-color: #3595cf;
+}
+
+#dotWp::before {
+  background-color: #207196;
+}
+#dotWp .list-item-bar::after {
+  width: 10%;
+  background-color: #207196;
+}
+
+#dotReact::before {
+  background-color: #00d1f7;
+}
+#dotReact .list-item-bar::after {
+  width: 10%;
+  background-color: #00d1f7;
+}
+
 #dotNd::before {
+  background-color: #47a59d;
+}
+#dotNd .list-item-bar::after {
+  width: 30%;
+  background-color: #47a59d;
+}
+
+#dotMdb::before {
+  background-color: #47a59d;
+}
+#dotMdb .list-item-bar::after {
+  width: 15%;
+  background-color: #47a59d;
+}
+
+#dotRest::before {
+  background-color: #0098be;
+}
+#dotRest .list-item-bar::after {
+  width: 10%;
+  background-color: #0098be;
+}
+
+#dotHdbs::before {
+  background-color: #f2704b;
+}
+#dotHdbs .list-item-bar::after {
+  width: 80%;
+  background-color: #f2704b;
+}
+
+#dotGit::before {
+  background-color: #ed5e2f;
+}
+#dotGit .list-item-bar::after {
+  width: 70%;
+  background-color: #ed5e2f;
+}
+
+#dotLinux::before {
+  background-color: #b84046;
+}
+#dotLinux .list-item-bar::after {
+  width: 30%;
+  background-color: #b84046;
+}
+
+#dotLottie::before {
+  background-color: #00ddb3;
+}
+#dotLottie .list-item-bar::after {
+  width: 75%;
+  background-color: #00ddb3;
+}
+
+#dotU01::before {
+  background-color: #47a59d;
+}
+#dotU01 .list-item-bar::after {
+  width: 50%;
+  background-color: #47a59d;
+}
+
+#dotU02::before {
+  background-color: #47a59d;
+}
+#dotU02 .list-item-bar::after {
+  width: 82%;
   background-color: #47a59d;
 }
 
@@ -1079,6 +1328,19 @@ h2 {
   width: 100%;
   top: 0;
   left: 0;
+}
+.art .art-cards div .art-card-main {
+  background-color: crimson;
+  height: 60vh;
+}
+.art .art-cards div .art-card-02 {
+  height: 30vh;
+}
+.art .art-cards div .art-card-03 {
+  height: 40vh;
+}
+.art .art-cards div .art-card-04 {
+  height: 50vh;
 }
 
 /** Contact **/

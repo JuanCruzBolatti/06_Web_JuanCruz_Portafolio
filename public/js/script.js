@@ -36,8 +36,17 @@ window.onscroll = () => {
     } else {
         logoContainer.classList.remove("logo-scrolled");
     }
-    if (window.scrollY > 800) {
-        logoDisplay(4)
+    if (window.scrollY > getScrollYOffset(portfolio) - 200) {
+        logoDisplay(1);
+    }
+    if (window.scrollY > getScrollYOffset(knowledge) - 200) {
+        logoDisplay(2);
+    }
+    if (window.scrollY > getScrollYOffset(art) - 200) {
+        logoDisplay(3);
+    }
+    if (window.scrollY > getScrollYOffset(contact) - 200) {
+        logoDisplay(4);
     }
     // Bottom Navbar Display
     bottomNavbarDisplay();
@@ -107,7 +116,7 @@ var animation = bodymovin.loadAnimation({
     rederer: 'svg',
     loop: true,
     autoplay: true,
-    path: '/js/animation/animation-home-main.lottie.json'
+    path: '/js/animation/animation-home-main-01.lottie.json'
 });
 var animationHat01 = bodymovin.loadAnimation({
     container: document.getElementById('animation-hat-01'),
@@ -164,6 +173,9 @@ tabs.forEach((tab, index)=>{
 
 // Hats
 var portfolio = document.querySelector('.portfolio');
+var knowledge = document.querySelector('.knowledge');
+var art = document.querySelector('.art');
+var contact = document.querySelector('.contact');
 
 // List
 function openList(list) {

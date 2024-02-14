@@ -21,7 +21,7 @@
                     object-fit: cover;
                 }
 
-                div {
+                div { 
                     position: absolute;
                     z-index: 5;
                     width: 10rem;
@@ -36,6 +36,23 @@
                     top: 0;
                     left: 0;
                 }
+            }
+
+            .art-card-main {
+                background-color: crimson;
+                height: 60vh;
+            }
+
+            .art-card-02 {
+                height: 30vh;
+            }
+
+            .art-card-03 {
+                height: 40vh;
+            }
+
+            .art-card-04 {
+                height: 50vh;
             }
         }
 
