@@ -1,9 +1,29 @@
 .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     border-top: 2px solid #e2e2e2;
 
     p {
+        line-height: 1.5rem;
+        font-size: 1.5rem;
+        align-items: center;
         margin: 1rem 0;
         font-weight: 400;
         color: #909090;
+        transition: .2s ease-in-out;
+
+    }
+
+    div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: .5rem;
+
+        p:first-child {
+            margin-bottom: .5rem;
+            font-size: 2rem;
+        }
     }
 }
