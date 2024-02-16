@@ -1,18 +1,9 @@
 .about-opener {
-    border: none;
-    padding: 0;
-    position: relative;
     width: 13rem;
-    cursor: pointer;
     aspect-ratio: 1;
-    overflow: hidden;
-    border-radius: 15px;
 
     img {
-        position: relative;
         width: 100%;
-        border-radius: 15px;
-        transition: .3s ease;
     }
 
     .bars {
@@ -54,10 +45,6 @@
     }
 
     &:hover {
-        img {
-            filter: grayscale(40%) contrast(120%);
-        }
-
         .bars {
             div {
                 opacity: 1;

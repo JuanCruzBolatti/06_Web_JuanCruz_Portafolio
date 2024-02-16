@@ -87,25 +87,97 @@ h2 {
 }
 
 .no-pointer {
-  cursor: default!important;
+  cursor: default !important;
+}
+
+.content-subtitle {
+  position: relative;
+  font-size: 6rem;
+  line-height: 6.2rem;
+  margin: 0;
+  color: #d6d6d6;
+  font-weight: 400;
+  transition: .3s ease-in-out;
+
+  span {
+    font-weight: 900;
+    transition: .3s ease-in-out;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .content-subtitle {
+    font-size: 5rem;
+    line-height: 5.2rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .content-subtitle {
+    font-size: 2.5rem;
+    line-height: 2.7rem;
+    text-align: justify;
+    color: #a1a1a1;
+
+    span {
+      background: rgb(72, 77, 168);
+      background: radial-gradient(circle, rgba(72, 77, 168, 1) 0%, rgba(63, 132, 213, 1) 100%);
+      background-size: 200%;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      white-space: nowrap;
+      animation: animationTextBackground 2s linear infinite;
+    }
+  }
+}
+
+@keyframes animationTextBackground {
+  from {
+    background-position: 0% center;
+  }
+
+  to {
+    background-position: -200% center;
+  }
+}
+
+.button-opener {
+  border: none;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  cursor: pointer;
+
+  img {
+    position: relative;
+    transition: .3s ease;
+  }
+
+  &:hover {
+    img {
+      filter: grayscale(40%) contrast(120%);
+    }
+  }
 }
 
 /* Displays */
 .display-mobile {
-  display: block!important;
+  display: block !important;
 }
 
 .display-pc {
-  display: none!important;
+  display: none !important;
 }
 
 @media only screen and (min-width: 768px) {
   .display-mobile {
-    display: none!important;
+    display: none !important;
   }
 
   .display-pc {
-    display: block!important;
+    display: block !important;
   }
 }
 
@@ -114,7 +186,7 @@ h2 {
 }
 
 .display-none {
-  display: none!important;
+  display: none !important;
 }
 
 /* Containers */
