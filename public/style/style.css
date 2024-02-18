@@ -747,11 +747,11 @@ h2 {
 .portfolio .portfolio-cards .portfolio-mini-card {
   background: rgb(128, 193, 227);
   background: radial-gradient(circle, rgba(128, 193, 227, 0.4) 0%, rgba(177, 228, 189, 0.4) 100%);
+  border: 1px solid rgb(138, 207, 244);
   background-size: 200% !important;
   background-position: 0%;
   border-radius: 12px;
   overflow: hidden;
-  border: 1px solid rgb(138, 207, 244);
   padding: 0 2rem;
   transition: 0.3s ease-in-out;
 }
@@ -1295,9 +1295,13 @@ h2 {
 /** Art **/
 .art {
   margin-top: 10rem;
+  margin-bottom: calc(65rem - 8vw + 15rem);
+  position: relative;
 }
 .art .art-content {
-  margin-top: 3rem;
+  top: 3rem;
+  left: 0;
+  position: absolute;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1308,9 +1312,9 @@ h2 {
 }
 .art .art-content h3::after {
   content: "";
+  position: absolute;
   height: 0;
   width: 3px;
-  position: absolute;
   top: 4rem;
   right: -6rem;
   background: rgb(255, 88, 88);
@@ -1319,14 +1323,15 @@ h2 {
 }
 .art .art-content .art-cards {
   display: grid;
-  grid-template-columns: repeat(3, 20rem);
-  grid-template-rows: repeat(3, 20rem);
+  grid-template-columns: repeat(3, 10.73vw);
+  grid-template-rows: repeat(3, 10.73vw);
   gap: 1rem;
 }
 .art .art-content .art-cards button {
-  background-color: #f0f0f0;
+  background-color: #f6f6f6;
   height: 100%;
-  transition: 0.2s ease-in-out;
+  outline: 0px solid rgb(238, 237, 236);
+  transition: 0.3s ease-in-out;
 }
 .art .art-content .art-cards button img {
   align-items: center;
@@ -1337,7 +1342,9 @@ h2 {
   transition: 0.1s ease-in-out;
 }
 .art .art-content .art-cards button:hover {
-  background-color: #e6e6e6;
+  box-shadow: 0px 0px 105px -82px rgba(0, 0, 0, 0.56) inset;
+  -webkit-box-shadow: 0px 0px 105px -82px rgba(0, 0, 0, 0.56) inset;
+  -moz-box-shadow: 0px 0px 105px -82px rgba(0, 0, 0, 0.56) inset;
 }
 .art .art-content .art-cards button:hover img {
   width: 62%;
@@ -1362,12 +1369,37 @@ h2 {
   background-size: 200% !important;
   background-position: 0%;
   overflow: hidden;
-  background: rgb(227, 198, 128);
+  background: rgb(228, 177, 177);
   background: radial-gradient(circle, rgba(228, 177, 177, 0.4) 0%, rgba(227, 198, 128, 0.4) 100%);
-  border: 1px solid rgb(227, 198, 128);
+  outline: 0px solid rgb(227, 198, 128);
   border-radius: 15px;
   grid-column: 1/3;
   grid-row: 2/4;
+  padding: 2.5rem;
+  transition: 0.3s ease;
+}
+.art .art-content .art-cards .art-card-03:hover {
+  background-position: 100% !important;
+  outline: 2px solid rgb(255, 158, 62);
+}
+.art .art-content .art-cards .art-card-03 div {
+  display: none;
+  animation: artContentMove 0.5s ease;
+}
+.art .art-content .art-cards .art-card-03 div h4 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+.art .art-content .art-cards .art-card-03 div p {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  text-align: justify;
+  text-indent: 1.2rem;
+}
+.art .art-content .art-cards .art-card-03 .art-card-active {
+  display: inline-block;
 }
 .art .art-content .art-cards .art-card-04 {
   grid-column: 3/4;
@@ -1393,10 +1425,107 @@ h2 {
 .art:hover .art-content h3::after {
   height: 25rem;
 }
+.art:hover .art-content .art-cards button {
+  outline: 2px solid rgb(238, 237, 236);
+}
+.art:hover .art-content .art-cards .art-card-01:hover {
+  outline: 2px solid rgb(255, 88, 88);
+}
+.art:hover .art-content .art-cards .art-card-02:hover {
+  outline: 2px solid rgb(255, 123, 123);
+}
+.art:hover .art-content .art-cards .art-card-03 {
+  outline: 1px solid rgb(227, 198, 128);
+}
+.art:hover .art-content .art-cards .art-card-04:hover {
+  outline: 2px solid rgb(255, 145, 73);
+}
+.art:hover .art-content .art-cards .art-card-05:hover {
+  outline: 2px solid rgb(255, 158, 62);
+}
+.art:hover .art-content .art-cards .art-button-active {
+  outline: 2px solid rgb(255, 88, 88);
+}
 
+@media only screen and (max-width: 1440px) {
+  .art .art-content {
+    top: 8rem;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  .art {
+    position: static;
+    margin-bottom: 0;
+  }
+  .art .art-content {
+    margin-top: 2rem;
+    position: static;
+  }
+  .art .art-content h3::after {
+    right: -2rem;
+  }
+  .art .art-content .art-cards .art-card-03 {
+    padding: 1.5rem 2rem;
+  }
+  .art .art-content .art-cards .art-card-03 div h4 {
+    font-size: 1.8rem;
+    margin: 0;
+  }
+  .art .art-content .art-cards .art-card-03 div p {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .art .art-content {
+    flex-direction: column;
+    gap: 6rem;
+  }
+  .art .art-content h3 {
+    width: 100%;
+  }
+  .art .art-content h3 span {
+    background: rgb(255, 88, 88);
+    background: radial-gradient(circle, rgb(255, 88, 88) 0%, rgb(255, 198, 61) 100%);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+    animation: animationTextBackground 2s linear infinite;
+  }
+  .art .art-content h3::after {
+    height: 3px;
+    width: 50%;
+    top: auto;
+    bottom: -3rem;
+    right: 25%;
+  }
+  .art .art-content .art-cards {
+    width: 100%;
+    grid-template-columns: repeat(3, calc((75vw - 2rem) / 3));
+    grid-template-rows: repeat(3, calc((75vw - 2rem) / 3));
+  }
+  .art:hover .art-content h3::after {
+    width: 60%;
+    height: 3px;
+    right: 20%;
+  }
+}
+@keyframes artContentMove {
+  from {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
 /** Contact **/
 .contact {
   margin-top: 15rem;
+  margin-bottom: 12rem;
 }
 .contact > div {
   margin-top: 3rem;
@@ -1531,6 +1660,9 @@ h2 {
   }
 }
 @media only screen and (max-width: 768px) {
+  .contact {
+    margin-bottom: 0;
+  }
   .contact > div {
     grid-template-columns: 1fr;
     gap: 1.5rem;

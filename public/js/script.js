@@ -171,6 +171,20 @@ tabs.forEach((tab, index)=>{
     });
 });
 
+// 
+const artButtons = document.querySelectorAll(".button-opener");
+const artContents = document.querySelectorAll("#art-card-content");
+
+artButtons.forEach((button, index) => {
+    button.addEventListener('click', (e) => {
+        artButtons.forEach(button => {button.classList.remove('art-button-active')});
+        button.classList.add('art-button-active');
+
+        artContents.forEach(content => {content.classList.remove('art-card-active')});
+        artContents[index - 1].classList.add('art-card-active');
+    });
+});
+
 // Hats
 var portfolio = document.querySelector('.portfolio');
 var knowledge = document.querySelector('.knowledge');

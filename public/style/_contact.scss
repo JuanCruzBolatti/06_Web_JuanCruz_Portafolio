@@ -1,5 +1,6 @@
 .contact {
     margin-top: 15rem;
+    margin-bottom: 12rem;
 
     &>div {
         margin-top: 3rem;
@@ -174,6 +175,8 @@
 
 @media only screen and (max-width: 768px) {
     .contact {
+        margin-bottom: 0;
+
         &>div {
             grid-template-columns: 1fr;
             gap: 1.5rem;
@@ -205,8 +208,8 @@
                     }
                 }
             }
-        }    
-        
+        }
+
         &:hover {
             &>div {
                 .contact-content {
@@ -224,12 +227,15 @@
     0% {
         padding: 1.2rem 2rem;
     }
+
     50% {
         padding: 1.2rem 3rem 1.2rem 1rem;
     }
+
     66% {
         padding: 1.2rem 1rem 1.2rem 3rem;
     }
+
     100% {
         padding: 1.2rem 2rem;
     }
@@ -256,4 +262,3 @@
     /* Microsoft Edge */
     color: #01264a;
 }
-
