@@ -56,6 +56,13 @@ window.onscroll = () => {
     } else {
         animationHat01.goToAndStop(0, true);
     }
+
+    // About Mobile 
+    if((window.innerWidth < 768) && (window.scrollY > (getScrollYOffset(aboutButton)/2 - 25) )) {
+        aboutSection.style.setProperty("--about-top", "52vh");
+    } else {
+        aboutSection.style.setProperty("--about-top", "5vh");
+    }
 }
 
 // Logo
@@ -172,7 +179,7 @@ tabs.forEach((tab, index)=>{
 });
 
 // 
-const artButtons = document.querySelectorAll(".button-opener");
+const artButtons = document.querySelectorAll("#button-opener-art");
 const artContents = document.querySelectorAll("#art-card-content");
 
 artButtons.forEach((button, index) => {
@@ -181,7 +188,7 @@ artButtons.forEach((button, index) => {
         button.classList.add('art-button-active');
 
         artContents.forEach(content => {content.classList.remove('art-card-active')});
-        artContents[index - 1].classList.add('art-card-active');
+        artContents[index].classList.add('art-card-active');
     });
 });
 

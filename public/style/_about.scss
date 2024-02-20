@@ -90,9 +90,8 @@
     position: fixed;
     top: 5vh;
     right: 7.5vw;
-    width: 42.5vw;
-    height: 90vh;
-    padding: 3rem;
+    width: 55vw;
+    height: 60vh;
     z-index: 5;
     animation: aboutDisplayAnimation .3s;
     opacity: 1;
@@ -104,28 +103,78 @@
     -webkit-backdrop-filter: saturate(180%) blur(50px);
     backdrop-filter: saturate(180%) blur(50px);
     outline: 2px solid rgba(64,64,170,0.4);
-
     background-size: 200%;
     background-position: var(--bg-x) var(--bg-y);
 
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
 
     .about-image {
-        height: 30%;
+        width: 50%;
+        position: relative;
 
         img {
             height: 100%;
             width: auto;
+            object-fit: cover;
+            border-radius: 0 15px 15px 0;
+        }
+
+        h2 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 5rem 2rem 2rem;
+            border-radius: 0 0 15px 0;
+            color: #e4e4e4;
+            font-size: 5rem;
+            font-weight: bold;
+            line-height: 5rem;
+            margin: 0;
+            background: rgb(0, 0, 0);
+            background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 100%);
+
+            animation: aboutTextAnimation .6s;
+            transition: .3s ease-in-out;
+
+            span {
+                font-weight: 200;
+                text-transform: capitalize;
+                color: #ececec;
+                width: 120%;
+            }
         }
     }
 
     .about-content {
-        height: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 50%;
+        padding: 3rem 4rem 3rem 3rem;
 
-        h2 {
-            font-size: 5rem;
-            margin: 0;
+        p {
+            font-size: 2rem;
+            text-align: justify;
+            line-height: 2.4rem;
+            text-indent: 2rem;
+            margin: 1rem 0;
+        }
+
+        .about-media {
+            display: flex;
+            flex-direction: row;
+            gap: 3rem;
+            align-items: center;
+        }
+    }
+
+    &:hover {
+        .about-image {
+            h2 {
+                padding: 10rem 2rem 2rem;
+            }
         }
     }
 }
@@ -139,16 +188,47 @@
     }
 }
 
+@keyframes aboutTextAnimation {
+    0% {
+        opacity: 0;
+        padding: 5rem 4rem 2rem 0rem;
+    }
+    100% {
+        opacity: 1;
+        padding: 5rem 2rem 2rem 2rem;
+    }
+}
+
 @media only screen and (max-width: 1280px) {
     .about {
-        width: 55vw;
+        width: 70vw;
+
+        .about-image {
+            width: 45%;
+        }
+
+        .about-content {
+            width: 55%;
+            padding: 2rem;
+
+            p {
+                font-size: 1.9rem;
+                line-height: 2rem;
+            }
+        }
     }
 }
 
 @media only screen and (max-width: 768px) {
     .about {
-        right: 0;
-        left: 15vw;
-        width: 70vw;
+        right: auto;
+        left: 12.5vw;
+        top: var(--about-top);
+        width: 75vw;
+        height: 45vh;
+
+        .about-content {
+            width: 100%;
+        }
     }
 }
