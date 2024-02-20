@@ -1,6 +1,5 @@
 .art {
-    margin-top: 10rem;
-    margin-bottom: calc((65rem - 8vw) + 15rem);
+    margin-bottom: calc((65rem - 8vw) + 5rem);
     position: relative;
 
     .art-content {
@@ -267,6 +266,20 @@
                 width: 100%;
                 grid-template-columns: repeat(3, calc((75vw - 2rem)/3));
                 grid-template-rows: repeat(3, calc((75vw - 2rem)/3));
+
+                .art-card-03 {
+
+                    div {
+                        h4 {
+                            font-size: 1.5rem;
+                        }
+
+                        p {
+                            font-size: 1.3rem;
+                            line-height: 1.4rem;
+                        }
+                    }
+                }
             }
         }
 

@@ -1,5 +1,8 @@
 .knowledge {
     margin-top: 10rem;
+    h2 {
+        margin-bottom: 3rem;
+    }
 
     .tab {
         background-color: #fff;
@@ -266,6 +269,11 @@
 
 @media only screen and (max-width: 768px) {
     .knowledge {
+        margin-top: 5rem;
+        h2 {
+            margin-bottom: 1rem;
+        }
+
         .tab {
             .tab-box {
                 .tab-btn {

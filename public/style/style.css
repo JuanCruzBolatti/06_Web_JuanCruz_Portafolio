@@ -67,6 +67,12 @@ h2 {
   line-height: 8vw;
 }
 
+@media only screen and (max-width: 768px) {
+  h2 {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+  }
+}
 /** Utilities **/
 /* Usuals */
 .fullscreen {
@@ -482,6 +488,7 @@ h2 {
 }
 /** Home **/
 .home {
+  margin-top: 20vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5vw;
@@ -526,13 +533,22 @@ h2 {
 }
 
 @media only screen and (max-width: 1280px) {
+  .home {
+    margin-top: 15vh;
+  }
   .home .home-content .home-text {
+    margin-top: 1rem;
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+  .home .home-content .home-text div p {
+    font-size: 2rem;
+    line-height: 2.2rem;
   }
 }
 @media only screen and (max-width: 768px) {
   .home {
+    margin-top: 5rem;
     grid-template-columns: 1fr;
   }
   .home .home-content {
@@ -713,6 +729,7 @@ h2 {
 @media only screen and (max-width: 1280px) {
   .about {
     width: 70vw;
+    height: 90vh;
   }
   .about .about-image {
     width: 45%;
@@ -740,7 +757,7 @@ h2 {
 }
 /** Portfolio **/
 .portfolio {
-  margin-top: 10rem;
+  padding-top: 1rem;
 }
 .portfolio .portfolio-cards {
   display: grid;
@@ -755,6 +772,7 @@ h2 {
 }
 .portfolio .portfolio-cards .portfolio-card img {
   height: 100%;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   transition: 0.3s ease-in-out;
@@ -872,6 +890,9 @@ h2 {
 /** Knowledge **/
 .knowledge {
   margin-top: 10rem;
+}
+.knowledge h2 {
+  margin-bottom: 3rem;
 }
 .knowledge .tab {
   background-color: #fff;
@@ -1077,6 +1098,12 @@ h2 {
   }
 }
 @media only screen and (max-width: 768px) {
+  .knowledge {
+    margin-top: 5rem;
+  }
+  .knowledge h2 {
+    margin-bottom: 1rem;
+  }
   .knowledge .tab .tab-box .tab-btn {
     font-size: 1.5rem;
     padding: 1rem 1.5rem;
@@ -1383,8 +1410,7 @@ h2 {
 
 /** Art **/
 .art {
-  margin-top: 10rem;
-  margin-bottom: calc(65rem - 8vw + 15rem);
+  margin-bottom: calc(65rem - 8vw + 5rem);
   position: relative;
 }
 .art .art-content {
@@ -1595,6 +1621,13 @@ h2 {
     grid-template-columns: repeat(3, calc((75vw - 2rem) / 3));
     grid-template-rows: repeat(3, calc((75vw - 2rem) / 3));
   }
+  .art .art-content .art-cards .art-card-03 div h4 {
+    font-size: 1.5rem;
+  }
+  .art .art-content .art-cards .art-card-03 div p {
+    font-size: 1.3rem;
+    line-height: 1.4rem;
+  }
   .art:hover .art-content h3::after {
     width: 60%;
     height: 3px;
@@ -1613,7 +1646,6 @@ h2 {
 }
 /** Contact **/
 .contact {
-  margin-top: 15rem;
   margin-bottom: 12rem;
 }
 .contact > div {

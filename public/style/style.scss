@@ -68,6 +68,12 @@ h2 {
   font-weight: 900;
   line-height: 8vw;
 }
+@media only screen and (max-width: 768px) {
+  h2 {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+  }
+}
 
 /** Utilities **/
 /* Usuals */
