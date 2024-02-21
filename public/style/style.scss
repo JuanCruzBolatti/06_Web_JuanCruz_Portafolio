@@ -15,6 +15,7 @@ html {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  cursor: url("/img/icons/cursor-pointer.png"), auto;
 }
 
 * {
@@ -39,6 +40,65 @@ body {
 ::selection {
   color: #fff;
   background: #3c55b4;
+}
+
+.cursor {
+  position: fixed;
+  z-index: 500;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 2px solid #000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  transition: width .2s ease-in-out, height .2s ease-in-out, border .3s ease-in-out;
+  pointer-events: none;
+}
+
+.cursor-hover {
+  width: 6rem;
+  height: 6rem;
+}
+
+.cursor-hover-white {
+  width: 6rem;
+  height: 6rem;
+  border: 2px solid #fff;
+}
+
+.cursor-button-hover {
+  position: fixed;
+  z-index: 500;
+  background-color: #3c55b4;
+  color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 0 15px 15px 15px;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(0, 0);
+  pointer-events: none;
+  transition: opacity .3s ease-in-out;
+}
+
+@media only screen and (max-width: 768px) {
+  .cursor {
+    display: none!important;
+  }
+  .cursor-hover {
+    display: none!important;
+  }
+  
+  .cursor-hover-white {
+    display: none!important;
+  }
+  
+  .cursor-button-hover {
+    display: none!important;
+  }
 }
 
 /** Global **/
@@ -68,6 +128,7 @@ h2 {
   font-weight: 900;
   line-height: 8vw;
 }
+
 @media only screen and (max-width: 768px) {
   h2 {
     font-size: 5rem;

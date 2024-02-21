@@ -1,7 +1,92 @@
+// Cursor
+const cursor = document.querySelector(".cursor");
+const allButtons = document.querySelectorAll("button");
+const allAnchors = document.querySelectorAll("a");
+let cursorPositionX = 0;
+let cursorPositionY = 0;
+let cursorDelay = 10;
+
+document.addEventListener("mousemove", (e) => {
+    cursorPositionX = e.pageX + 8;
+    cursorPositionY = e.pageY + 8 - window.scrollY;
+});
+
+document.addEventListener("mouseenter", () => {
+    cursor.style.opacity = 1;
+});
+
+document.addEventListener("mouseleave", () => {
+    cursor.style.opacity = 0;
+});
+
+function updateCursorPosition() {
+    let dx = (cursorPositionX - parseInt(cursor.style.left || 0, 10)) / 10;
+    let dy = (cursorPositionY - parseInt(cursor.style.top || 0, 10)) / 10;
+
+    cursor.style.left = parseInt(cursor.style.left || 0, 10) + dx + "px";
+    cursor.style.top = parseInt(cursor.style.top || 0, 10) + dy + "px";
+
+    setTimeout(updateCursorPosition, cursorDelay);
+}
+
+updateCursorPosition();
+
+const cursorButtonHover = document.querySelector(".cursor-button-hover");
+
+allButtons.forEach(element => {
+    element.addEventListener("mouseenter", e => {
+        if(!element.classList.contains('tab-btn')) {
+            cursorButtonHover.textContent = e.target.getAttribute("value");
+            cursorButtonHover.style.opacity = 1;
+            cursor.style.opacity = 0;
+        } else {
+            cursor.classList.add("cursor-hover-white");
+        }
+    });
+
+    element.addEventListener("mousemove", e => {
+        cursorButtonHover.style.top = e.clientY + 'px';
+        cursorButtonHover.style.left = e.clientX + 'px';
+    });
+});
+
+allButtons.forEach(element => {
+    element.addEventListener("mouseleave", () => {
+        if(!element.classList.contains('tab-btn')) {
+            cursorButtonHover.style.opacity = 0;
+            cursor.style.opacity = 1;
+        } else {
+            cursor.classList.remove("cursor-hover-white");
+        }
+       
+    });
+});
+
+allAnchors.forEach(element => {
+    element.addEventListener("mouseenter", () => {
+        if(element.id == "portfolioAnchor") {
+            cursor.classList.add("cursor-hover-white");
+        } else {
+            cursor.classList.add("cursor-hover");
+        }
+    });
+    
+});
+
+allAnchors.forEach(element => {
+    element.addEventListener("mouseleave", () => {
+        if(element.id == "portfolioAnchor") {
+            cursor.classList.remove("cursor-hover-white");
+        } else {
+            cursor.classList.remove("cursor-hover");
+        }
+    });
+});
+
 // Scroll
 function getScrollYOffset(element) {
     var rect = element.getBoundingClientRect();
-    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    var scrollTop = window.pageY || document.documentElement.scrollTop;
     return rect.top + scrollTop;
 }
 
@@ -228,3 +313,4 @@ document.querySelector(".about").onmousemove = e => {
     bg.style.setProperty("--bg-x", `${x}px`);
     bg.style.setProperty("--bg-y", `${y}px`);    
 }
+

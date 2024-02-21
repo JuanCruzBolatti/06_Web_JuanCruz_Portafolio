@@ -303,7 +303,11 @@
     
                                 .list-title {
                                     width: 100%;
-                                    grid-template-columns: .8rem auto 10rem;
+                                    grid-template-columns: .8rem auto;
+                                }
+
+                                .list-title-bar {
+                                    grid-template-columns: .8rem auto 10rem!important;
                                 }
                             }
                         }

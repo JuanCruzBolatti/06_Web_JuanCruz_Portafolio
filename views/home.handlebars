@@ -4,7 +4,7 @@
         <div id="animation-home"></div>
 
         <div class="home-text">
-            <button class="button-opener about-opener" onclick="toggleAbout()">
+            <button class="button-opener about-opener" onclick="toggleAbout()" value="Conoceme">
                 <img src="/img/perfil.png" alt="">
                 <div class="bars">
                     <div class="bar1"></div>
@@ -42,7 +42,7 @@
             <div class="portfolio-card-content">
                 <h3>Empresariales</h3>
                 <p>Para que se de a conocer tu Empresa!</p>
-                <a href="#"> Visitar </a>
+                <a href="#" id="portfolioAnchor"> Visitar </a>
             </div>
             <img src="/img/perfil.png" alt="">
         </div>
@@ -51,7 +51,7 @@
             <div class="portfolio-card-content">
                 <h3>Portafolios</h3>
                 <p>La mejor forma de mostrar tu trabajo!</p>
-                <a href="#"> Visitar </a>
+                <a href="#" id="portfolioAnchor"> Visitar </a>
             </div>
             <img src="/img/perfil.png" alt="">
         </div>
@@ -60,7 +60,7 @@
             <div class="portfolio-card-content">
                 <h3>Artísticos</h3>
                 <p>Para desplegar tu arte en el Mundo!</p>
-                <a href="#"> Visitar </a>
+                <a href="#" id="portfolioAnchor"> Visitar </a>
             </div>
             <img src="/img/perfil.png" alt="">
         </div>
@@ -91,7 +91,7 @@
     </div>
 </section>
 
-<section class="container knowledge">
+<section class="container knowledge" id="knowledge">
     <h2 style="font-size: 10vw;">Conocimientos</h2>
 
     <div class="tab">
@@ -147,7 +147,7 @@
                         </div>
 
                         <div class="wide-list" id="wideListBlue">
-                            <div class="list-title no-pointer" id="listCpp">
+                            <div class="list-title no-pointer list-title-bar" id="listCpp">
                                 <div class="list-dot"></div>
                                 <p>C - C++</p>
                                 <div class="list-bar"></div>
@@ -181,8 +181,6 @@
                             </div>
                         </div>
 
-
-
                         <div class="wide-list" id="wideListOrange">
                             <div class="list-title" id="list04" onclick="openList(this)">
                                 <div class="list-dot"></div>
@@ -199,7 +197,6 @@
                         </div>
                     </div>
 
-
                 </div>
 
             </div>
@@ -212,7 +209,7 @@
 
                     <div>
                         <div class="wide-list" id="wideListPhotoshop">
-                            <div class="list-title no-pointer">
+                            <div class="list-title no-pointer list-title-bar">
                                 <div class="list-dot"></div>
                                 <p>Photoshop</p>
                                 <div class="list-bar"></div>
@@ -220,14 +217,14 @@
                         </div>
 
                         <div class="wide-list" id="wideListPremiere">
-                            <div class="list-title no-pointer">
+                            <div class="list-title no-pointer list-title-bar">
                                 <div class="list-dot"></div>
                                 <p>Premiere</p>
                                 <div class="list-bar"></div>
                             </div>
                         </div>
                         <div class="wide-list" id="wideListInDesign">
-                            <div class="list-title no-pointer">
+                            <div class="list-title no-pointer list-title-bar">
                                 <div class="list-dot"></div>
                                 <p>InDesign</p>
                                 <div class="list-bar"></div>
@@ -235,7 +232,7 @@
                         </div>
 
                         <div class="wide-list" id="wideListAudacity">
-                            <div class="list-title no-pointer">
+                            <div class="list-title no-pointer list-title-bar">
                                 <div class="list-dot"></div>
                                 <p>Audacity</p>
                                 <div class="list-bar"></div>
@@ -245,7 +242,7 @@
 
                     <div>
                         <div class="wide-list" id="wideListFusion">
-                            <div class="list-title no-pointer">
+                            <div class="list-title no-pointer list-title-bar">
                                 <div class="list-dot"></div>
                                 <p>Fusion 360</p>
                                 <div class="list-bar"></div>
@@ -253,7 +250,7 @@
                         </div>
 
                         <div class="wide-list" id="wideListDaVinci">
-                            <div class="list-title no-pointer">
+                            <div class="list-title no-pointer list-title-bar">
                                 <div class="list-dot"></div>
                                 <p>DaVinci Resolve</p>
                                 <div class="list-bar"></div>
@@ -261,7 +258,7 @@
                         </div>
 
                         <div class="wide-list" id="wideListFable">
-                            <div class="list-title no-pointer">
+                            <div class="list-title no-pointer list-title-bar">
                                 <div class="list-dot"></div>
                                 <p>Fable (Animation)</p>
                                 <div class="list-bar"></div>
@@ -280,7 +277,7 @@
 
                     <div>
                         <div class="wide-list" id="wideListEnglish">
-                            <div class="list-title no-pointer">
+                            <div class="list-title no-pointer list-title-bar">
                                 <div class="list-dot"></div>
                                 <p>Inglés (B1)</p>
                                 <div class="list-bar"></div>
@@ -307,7 +304,7 @@
 
                     <div>
                         <div class="wide-list" id="wideListItalian">
-                            <div class="list-title no-pointer">
+                            <div class="list-title no-pointer list-title-bar">
                                 <div class="list-dot"></div>
                                 <p>Italiano (Básico)</p>
                                 <div class="list-bar"></div>
@@ -385,7 +382,7 @@
 
                     <div>
                         <div class="wide-list" id="wideListHaskell">
-                            <div class="list-title no-pointer">
+                            <div class="list-title no-pointer list-title-bar">
                                 <div class="list-dot"></div>
                                 <p>Haskell</p>
                                 <div class="list-bar"></div>
@@ -395,7 +392,7 @@
 
                     <div>
                         <div class="wide-list" id="wideListProlog">
-                            <div class="list-title no-pointer">
+                            <div class="list-title no-pointer list-title-bar">
                                 <div class="list-dot"></div>
                                 <p>Prolog</p>
                                 <div class="list-bar"></div>
@@ -413,7 +410,7 @@
 
 <div style="margin: 0 auto; text-align: center; margin: 10vh;">a</div> <!-- Animacion -->
 
-<section class="container art">
+<section class="container art" id="art">
     <h2>Arte</h2>
 
     <div class="art-content">
@@ -423,7 +420,7 @@
 
         <div class="art-cards">
 
-            <button class="button-opener art-card-sq art-card-01 art-button-active" id="button-opener-art">
+            <button class="button-opener art-card-sq art-card-01 art-button-active" id="button-opener-art" value="Poemas y cuentos">
                 <img src="/img/icons/25231.png" alt="">
                 <div class="art-bars">
                     <div class="bar1"></div>
@@ -431,7 +428,7 @@
                 </div>
             </button>
 
-            <button class="button-opener art-card-rect art-card-02" id="button-opener-art">
+            <button class="button-opener art-card-rect art-card-02" id="button-opener-art" value="Diseño">
                 <img src="/img/icons/174857.png" alt="">
                 <div class="art-bars">
                     <div class="bar1"></div>
@@ -466,7 +463,7 @@
 
             </div>
 
-            <button class="button-opener art-card-sq art-card-04" id="button-opener-art">
+            <button class="button-opener art-card-sq art-card-04" id="button-opener-art" value="Edición">
                 <img src="/img/icons/25231.png" alt="">
                 <div class="art-bars">
                     <div class="bar1"></div>
@@ -474,7 +471,7 @@
                 </div>
             </button>
 
-            <button class="button-opener art-card-sq art-card-05" id="button-opener-art">
+            <button class="button-opener art-card-sq art-card-05" id="button-opener-art" value="Premios">
                 <img src="/img/icons/1384031.png" alt="">
                 <div class="art-bars">
                     <div class="bar1"></div>
@@ -489,7 +486,7 @@
 
 <div style="margin: 0 auto; text-align: center; margin: 10vh;">a</div> <!-- Animacion -->
 
-<section class="container contact">
+<section class="container contact" id="contact">
     <h2>Contacto</h2>
     <div>
 
